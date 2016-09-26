@@ -1,0 +1,122 @@
+.agmodal{
+	position: relative;
+	background: #f7f8f9;
+	box-shadow: 0 0 15px 0 rgba(0,0,0,0.2);
+	width: 450px;
+	margin: 50px auto;
+	padding: 30px 35px 30px 35px;
+	transition: all 0.4s ease;
+	transform-origin: center top;
+	cursor: auto;
+	display: none;
+
+	&--fade{
+		opacity: 0;
+	}
+
+	&--slide{
+		transform: translate3d(0,-500px,0);
+	}
+
+	&--scale{
+		transform: scale3d(0.9,0.9,1);
+	}
+
+	&--3d{
+		transform: perspective(1000px) rotateX(45deg);
+	}
+
+	&--morph{
+		transition: transform 0.4s cubic-bezier(0.7,0,0.3,1),opacity 0.4s ease,width 0.4s ease;
+		transform: translate3d(-400px, 0, 0) scale3d(1.4, 0.5, 1);
+	}
+
+	&--visible{
+		transform: translate3d(0,0,0) scale3d(1,1,1);
+		opacity: 1;
+	}
+
+	&--video{
+		padding: 0;
+		width: 1920px;
+		max-width: 75%;
+		max-height: 100%;
+		height: auto;
+
+		video{
+			width: 100%;
+			display: block;
+		}
+	}
+}
+
+@media (max-width: 600px){
+	.agmodal{
+		width: 100%;
+		max-width:100%;
+	}
+}
+
+html.agmodal--lock-test{
+	overflow-y: hidden !important;
+}
+
+html.agmodal--lock{
+
+	body{
+		overflow: hidden !important;
+	}
+}
+
+.agmodal__wrapper{
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+	transition: all 0.4s ease;
+	cursor: pointer;
+	overflow: auto;
+	overflow-y: scroll;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	pointer-events: none;
+	opacity: 0;
+
+	.agmodal{
+		display: block;
+	}
+
+	&:focus{
+		outline-width: 0;
+	}
+
+	&--visible{
+		pointer-events: auto;
+		opacity: 1;
+	}
+
+	& *{
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+}
+
+.agmodal__close{
+	@include cross(30px,rgba(0,0,0,0.5),#000);
+	top: 7px;
+	right: 7px;
+}
+
+.agmodal__video-preloader{
+	position: absolute;
+	width: 100%;
+	top: 50%;
+	transform: translate(0,-50%);
+	text-align: center;
+	z-index: 10;
+	font-size: 64px;
+}

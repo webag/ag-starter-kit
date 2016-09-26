@@ -1,0 +1,21 @@
+.btn{
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+	padding: 5px 20px;
+	border: none;
+	font-size: 14px;
+	line-height: 1;
+	text-decoration: none;
+	text-align: center;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+
+	&:focus{
+		outline: none;
+	}
+}

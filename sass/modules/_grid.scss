@@ -1,0 +1,50 @@
+.hidden{
+	display: none !important;
+}
+
+@for $i from 1 through 12 {
+	.grid-#{$i} {
+		@extend %grid;
+		width: 1 / 12 * $i * 100%;
+	}
+}
+
+@each $breakpoint,$value in $breakpoints {
+	@include res($breakpoint){
+		@for $i from 1 through 12 {
+			.grid-#{$i}_#{$breakpoint} {
+				width: 1 / 12 * $i * 100%;
+			}
+		}
+		.hidden_#{$breakpoint}{
+			display: none !important;
+		}
+		.visible_#{$breakpoint}{
+			display: block;
+		}
+	}
+}
+
+.container{
+	margin: 0 auto;
+	width: 100%;
+	max-width: $container_width;
+	position: relative;
+}
+
+.clearfix{
+	&:before{
+		content: " ";
+		display: table;
+	}
+	&:after{
+		content: " ";
+		display: table;
+		clear: both;
+	}
+}
+
+.img-responsive{
+	width: 100%;
+	height: auto;
+}

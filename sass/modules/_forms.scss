@@ -1,0 +1,17 @@
+label{cursor: pointer;}
+
+input[type="text"],input[type="tel"],textarea{
+
+	@include placeholder {
+		color: #A8A8A8;
+		opacity: 1;
+		transition: all 0.3s ease;
+	}
+
+	&:focus{
+		outline: none;
+		@include placeholder {
+			opacity: 0;
+		}
+	}
+}
