@@ -1,4 +1,6 @@
-// отправка формы в php
+/***********************
+ отправка формы в php BEGIN
+***********************/
 $(document).ready(function(){
 
 	$(".ajax-form").on("submit", function(event) {
@@ -45,7 +47,9 @@ $(document).ready(function(){
 		}
 	});
 });
-// отправка формы в php
+/***********************
+ отправка формы в php END
+***********************/
 
 
 jQuery(function($){
@@ -53,31 +57,43 @@ jQuery(function($){
 });
 
 
+/***********************
+fancybox BEGIN
+***********************/
+$(document).ready(function(){
+	$('.fancy').fancybox({
+		padding: 0
+	});
+});
+/***********************
+fancybox END
+***********************/
+
+
+/***********************
+agmodal BEGIN
+***********************/
 $(document).ready(function(){
 	$('.agmodal').agmodal({
 		effect: 'fade',
 		overlayColor: 'rgba(44, 55, 73, 0.9)'
 	});
 });
+/***********************
+agmodal END
+***********************/
 
 
-$(document).ready(function(){
-	$('.fancy').fancybox({
-		padding: 0
-	});
-});
-
-
-/**************************************************
- Прокрутка к секциям
- ***************************************************/
-$('a[href^="#"]').not('.header-top__burger a,.faq-question').click(function () {
+/***********************
+ Прокрутка к секциям BEGIN
+***********************/
+$('.scrollto').click(function () {
 	var elementClick = $(this).attr("href");
 	var destination = $(elementClick).offset().top;
 	$('html').velocity( "scroll", { duration: 1000, easing: "easeInOutCubic", offset: destination, mobileHA: false });
 	$('body').velocity( "scroll", { duration: 1000, easing: "easeInOutCubic", offset: destination, mobileHA: false });
 	return false;
 });
-/**************************************************
- End Прокрутка к секциям
- ***************************************************/
+/***********************
+ Прокрутка к секциям END
+***********************/

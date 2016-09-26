@@ -3,6 +3,7 @@
 	background: #f7f8f9;
 	box-shadow: 0 0 15px 0 rgba(0,0,0,0.2);
 	width: 450px;
+	max-width: 100%;
 	margin: 50px auto;
 	padding: 30px 35px 30px 35px;
 	transition: all 0.4s ease;
@@ -50,12 +51,6 @@
 	}
 }
 
-@media (max-width: 600px){
-	.agmodal{
-		width: 100%;
-		max-width:100%;
-	}
-}
 
 html.agmodal--lock-test{
 	overflow-y: hidden !important;
@@ -106,9 +101,9 @@ html.agmodal--lock{
 }
 
 .agmodal__close{
-	@include cross(30px,rgba(0,0,0,0.5),#000);
-	top: 7px;
-	right: 7px;
+	@include cross(20px,1px,rgba(0,0,0,0.5),#000);
+	top: 0px;
+	right: 0px;
 }
 
 .agmodal__video-preloader{

@@ -59,20 +59,28 @@
 /// Иоконка закрытия модальных окон в виде креста.
 /// @access public
 /// @param {String} $cross_size - размер иконки
-@mixin cross($cross_size,$color,$hover-color) {
+@mixin cross($cross_size,$cross_weight,$color,$hover-color) {
 	position: absolute;
-	width: $cross_size;
-	height: $cross_size;
 	cursor: pointer;
-	box-sizing: border-box;
+	transition: all 0.3s ease;
+	background-color: #e3e3e3;
+	width: 35px;
+	height: 35px;
+
+	&:hover{
+		background-color: #555;
+	}
 
 	&:before,&:after{
 		content: '';
 		position: absolute;
-		top: 50%;
+		top: 0;
+		bottom: 0;
 		left: 0;
+		right: 0;
+		margin: auto;
 		width: $cross_size;
-		height: 2px;
+		height: $cross_weight;
 		background-color: $color;
 		transition: all 0.3s ease;
 	}

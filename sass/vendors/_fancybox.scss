@@ -110,9 +110,9 @@ $fancyColor: #666;
 }
 
 .fancybox-close{
-	@include cross(30px,rgba(0,0,0,0.5),#000);
-	top: 7px;
-	right: 7px;
+	@include cross(30px,2px,rgba(0,0,0,0.5),#000);
+	top: 0px;
+	right: 0px;
 }
 
 .fancybox-nav {

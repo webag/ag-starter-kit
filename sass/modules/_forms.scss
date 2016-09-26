@@ -1,6 +1,9 @@
 label{cursor: pointer;}
 
-input[type="text"],input[type="tel"],textarea{
+input[type="text"],input[type="tel"],input[type="email"],input[type="password"],textarea{
+	font-family: $font;
+	line-height: 1;
+	-webkit-appearance: none;
 
 	@include placeholder {
 		color: #A8A8A8;

@@ -221,7 +221,7 @@ body {
   }
 }
 
-@media (max-width: 580px) {
+@media (max-width: 680px) {
   .grid-1_s {
     width: 8.33333%;
   }
@@ -266,6 +266,51 @@ body {
   }
 }
 
+@media (max-width: 480px) {
+  .grid-1_xs {
+    width: 8.33333%;
+  }
+  .grid-2_xs {
+    width: 16.66667%;
+  }
+  .grid-3_xs {
+    width: 25%;
+  }
+  .grid-4_xs {
+    width: 33.33333%;
+  }
+  .grid-5_xs {
+    width: 41.66667%;
+  }
+  .grid-6_xs {
+    width: 50%;
+  }
+  .grid-7_xs {
+    width: 58.33333%;
+  }
+  .grid-8_xs {
+    width: 66.66667%;
+  }
+  .grid-9_xs {
+    width: 75%;
+  }
+  .grid-10_xs {
+    width: 83.33333%;
+  }
+  .grid-11_xs {
+    width: 91.66667%;
+  }
+  .grid-12_xs {
+    width: 100%;
+  }
+  .hidden_xs {
+    display: none !important;
+  }
+  .visible_xs {
+    display: block;
+  }
+}
+
 .container {
   margin: 0 auto;
   width: 100%;
@@ -293,47 +338,53 @@ label {
   cursor: pointer;
 }
 
-input[type="text"]::-webkit-input-placeholder, input[type="tel"]::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+input[type="text"], input[type="tel"], input[type="email"], input[type="password"], textarea {
+  font-family: Segoe Ui, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  line-height: 1;
+  -webkit-appearance: none;
+}
+
+input[type="text"]::-webkit-input-placeholder, input[type="tel"]::-webkit-input-placeholder, input[type="email"]::-webkit-input-placeholder, input[type="password"]::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
   color: #A8A8A8;
   opacity: 1;
   transition: all 0.3s ease;
 }
 
-input[type="text"]::-moz-placeholder, input[type="tel"]::-moz-placeholder, textarea::-moz-placeholder {
+input[type="text"]::-moz-placeholder, input[type="tel"]::-moz-placeholder, input[type="email"]::-moz-placeholder, input[type="password"]::-moz-placeholder, textarea::-moz-placeholder {
   color: #A8A8A8;
   opacity: 1;
   transition: all 0.3s ease;
 }
 
-input[type="text"]:-moz-placeholder, input[type="tel"]:-moz-placeholder, textarea:-moz-placeholder {
+input[type="text"]:-moz-placeholder, input[type="tel"]:-moz-placeholder, input[type="email"]:-moz-placeholder, input[type="password"]:-moz-placeholder, textarea:-moz-placeholder {
   color: #A8A8A8;
   opacity: 1;
   transition: all 0.3s ease;
 }
 
-input[type="text"]:-ms-input-placeholder, input[type="tel"]:-ms-input-placeholder, textarea:-ms-input-placeholder {
+input[type="text"]:-ms-input-placeholder, input[type="tel"]:-ms-input-placeholder, input[type="email"]:-ms-input-placeholder, input[type="password"]:-ms-input-placeholder, textarea:-ms-input-placeholder {
   color: #A8A8A8;
   opacity: 1;
   transition: all 0.3s ease;
 }
 
-input[type="text"]:focus, input[type="tel"]:focus, textarea:focus {
+input[type="text"]:focus, input[type="tel"]:focus, input[type="email"]:focus, input[type="password"]:focus, textarea:focus {
   outline: none;
 }
 
-input[type="text"]:focus::-webkit-input-placeholder, input[type="tel"]:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder {
+input[type="text"]:focus::-webkit-input-placeholder, input[type="tel"]:focus::-webkit-input-placeholder, input[type="email"]:focus::-webkit-input-placeholder, input[type="password"]:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder {
   opacity: 0;
 }
 
-input[type="text"]:focus::-moz-placeholder, input[type="tel"]:focus::-moz-placeholder, textarea:focus::-moz-placeholder {
+input[type="text"]:focus::-moz-placeholder, input[type="tel"]:focus::-moz-placeholder, input[type="email"]:focus::-moz-placeholder, input[type="password"]:focus::-moz-placeholder, textarea:focus::-moz-placeholder {
   opacity: 0;
 }
 
-input[type="text"]:focus:-moz-placeholder, input[type="tel"]:focus:-moz-placeholder, textarea:focus:-moz-placeholder {
+input[type="text"]:focus:-moz-placeholder, input[type="tel"]:focus:-moz-placeholder, input[type="email"]:focus:-moz-placeholder, input[type="password"]:focus:-moz-placeholder, textarea:focus:-moz-placeholder {
   opacity: 0;
 }
 
-input[type="text"]:focus:-ms-input-placeholder, input[type="tel"]:focus:-ms-input-placeholder, textarea:focus:-ms-input-placeholder {
+input[type="text"]:focus:-ms-input-placeholder, input[type="tel"]:focus:-ms-input-placeholder, input[type="email"]:focus:-ms-input-placeholder, input[type="password"]:focus:-ms-input-placeholder, textarea:focus:-ms-input-placeholder {
   opacity: 0;
 }
 
@@ -344,6 +395,7 @@ input[type="text"]:focus:-ms-input-placeholder, input[type="tel"]:focus:-ms-inpu
   padding: 5px 20px;
   border: none;
   font-size: 14px;
+  font-family: Segoe Ui, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   line-height: 1;
   text-decoration: none;
   text-align: center;
@@ -365,6 +417,7 @@ input[type="text"]:focus:-ms-input-placeholder, input[type="tel"]:focus:-ms-inpu
   background: #f7f8f9;
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
   width: 450px;
+  max-width: 100%;
   margin: 50px auto;
   padding: 30px 35px 30px 35px;
   transition: all 0.4s ease;
@@ -421,13 +474,6 @@ input[type="text"]:focus:-ms-input-placeholder, input[type="tel"]:focus:-ms-inpu
   display: block;
 }
 
-@media (max-width: 600px) {
-  .agmodal {
-    width: 100%;
-    max-width: 100%;
-  }
-}
-
 html.agmodal--lock-test {
   overflow-y: hidden !important;
 }
@@ -471,21 +517,29 @@ html.agmodal--lock body {
 
 .agmodal__close {
   position: absolute;
-  width: 30px;
-  height: 30px;
   cursor: pointer;
-  box-sizing: border-box;
-  top: 7px;
-  right: 7px;
+  transition: all 0.3s ease;
+  background-color: #e3e3e3;
+  width: 35px;
+  height: 35px;
+  top: 0px;
+  right: 0px;
+}
+
+.agmodal__close:hover {
+  background-color: #555;
 }
 
 .agmodal__close:before, .agmodal__close:after {
   content: '';
   position: absolute;
-  top: 50%;
+  top: 0;
+  bottom: 0;
   left: 0;
-  width: 30px;
-  height: 2px;
+  right: 0;
+  margin: auto;
+  width: 20px;
+  height: 1px;
   background-color: rgba(0, 0, 0, 0.5);
   transition: all 0.3s ease;
 }
@@ -640,19 +694,27 @@ html.agmodal--lock body {
 
 .fancybox-close {
   position: absolute;
-  width: 30px;
-  height: 30px;
   cursor: pointer;
-  box-sizing: border-box;
-  top: 7px;
-  right: 7px;
+  transition: all 0.3s ease;
+  background-color: #e3e3e3;
+  width: 35px;
+  height: 35px;
+  top: 0px;
+  right: 0px;
+}
+
+.fancybox-close:hover {
+  background-color: #555;
 }
 
 .fancybox-close:before, .fancybox-close:after {
   content: '';
   position: absolute;
-  top: 50%;
+  top: 0;
+  bottom: 0;
   left: 0;
+  right: 0;
+  margin: auto;
   width: 30px;
   height: 2px;
   background-color: rgba(0, 0, 0, 0.5);
