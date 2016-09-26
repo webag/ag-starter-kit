@@ -52,9 +52,15 @@ $(document).ready(function(){
 ***********************/
 
 
+/***********************
+Input mask BEGIN
+***********************/
 jQuery(function($){
 	$("input[type='tel']").mask("+7 (999) 999-99-99");
 });
+/***********************
+Input mask END
+***********************/
 
 
 /***********************
@@ -87,13 +93,29 @@ agmodal END
 /***********************
  Прокрутка к секциям BEGIN
 ***********************/
-$('.scrollto').click(function () {
-	var elementClick = $(this).attr("href");
-	var destination = $(elementClick).offset().top;
-	$('html').velocity( "scroll", { duration: 1000, easing: "easeInOutCubic", offset: destination, mobileHA: false });
-	$('body').velocity( "scroll", { duration: 1000, easing: "easeInOutCubic", offset: destination, mobileHA: false });
-	return false;
+$(document).ready(function(){
+	$('.scrollto').click(function () {
+		var elementClick = $(this).attr("href");
+		var destination = $(elementClick).offset().top;
+		$('html').velocity( "scroll", { duration: 1000, easing: "easeInOutCubic", offset: destination, mobileHA: false });
+		$('body').velocity( "scroll", { duration: 1000, easing: "easeInOutCubic", offset: destination, mobileHA: false });
+		return false;
+	});
 });
 /***********************
  Прокрутка к секциям END
+***********************/
+
+
+/***********************
+Custom scrollbars BEGIN
+***********************/
+$(document).ready(function(){
+	$(".selector").mCustomScrollbar({
+		axis:"y",
+		scrollInertia: 200
+	});
+});
+/***********************
+Custom scrollbars END
 ***********************/
