@@ -9,7 +9,7 @@
 			<input type="email" name="user_email" placeholder="Введите e-mail*" data-label="Email" data-req="true">
 			<input type="tel" name="user_tel" data-label="Телефон" placeholder="Введите телефон*" data-req="true">
 			<input type="hidden" value="Новая заявка" name="form_subject">
-			<button type="submit">Отправить</button>
+			<button type="submit" class="btn">Отправить</button>
 		</form>
 	</div>
 

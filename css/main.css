@@ -34,6 +34,11 @@ body {
   color: #353434;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
 .hidden {
   display: none !important;
 }
@@ -339,30 +344,39 @@ label {
 }
 
 input[type="text"], input[type="tel"], input[type="email"], input[type="password"], textarea {
+  display: inline-block;
   font-family: Segoe Ui, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
-  line-height: 1;
+  font-size: 14px;
+  line-height: 1.3;
   -webkit-appearance: none;
+  border: 1px solid #666;
+  padding: 5px 10px;
+  overflow: visible;
 }
 
 input[type="text"]::-webkit-input-placeholder, input[type="tel"]::-webkit-input-placeholder, input[type="email"]::-webkit-input-placeholder, input[type="password"]::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  font-size: 14px;
   color: #A8A8A8;
   opacity: 1;
   transition: all 0.3s ease;
 }
 
 input[type="text"]::-moz-placeholder, input[type="tel"]::-moz-placeholder, input[type="email"]::-moz-placeholder, input[type="password"]::-moz-placeholder, textarea::-moz-placeholder {
+  font-size: 14px;
   color: #A8A8A8;
   opacity: 1;
   transition: all 0.3s ease;
 }
 
 input[type="text"]:-moz-placeholder, input[type="tel"]:-moz-placeholder, input[type="email"]:-moz-placeholder, input[type="password"]:-moz-placeholder, textarea:-moz-placeholder {
+  font-size: 14px;
   color: #A8A8A8;
   opacity: 1;
   transition: all 0.3s ease;
 }
 
 input[type="text"]:-ms-input-placeholder, input[type="tel"]:-ms-input-placeholder, input[type="email"]:-ms-input-placeholder, input[type="password"]:-ms-input-placeholder, textarea:-ms-input-placeholder {
+  font-size: 14px;
   color: #A8A8A8;
   opacity: 1;
   transition: all 0.3s ease;
@@ -393,19 +407,19 @@ input[type="text"]:focus:-ms-input-placeholder, input[type="tel"]:focus:-ms-inpu
   vertical-align: middle;
   position: relative;
   padding: 5px 20px;
-  border: none;
   font-size: 14px;
   font-family: Segoe Ui, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
-  line-height: 1;
+  line-height: 1.3;
   text-decoration: none;
   text-align: center;
   cursor: pointer;
   transition: all 0.3s ease;
   -webkit-user-select: none;
-  -moz-user-select: none;
-  -o-user-select: none;
-  -ms-user-select: none;
-      user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-color: #DDD;
+  border: 1px solid #DDD;
 }
 
 .btn:focus {
