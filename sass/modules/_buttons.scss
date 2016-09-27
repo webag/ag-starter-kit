@@ -1,6 +1,6 @@
 .btn{
 	display: inline-block;
-	vertical-align: middle;
+	vertical-align: top;
 	position: relative;
 	padding: 5px 20px;
 	font-size: 14px;
@@ -17,4 +17,9 @@
 	&:focus{
 		outline: none;
 	}
+}
+
+button::-moz-focus-inner {
+	border: 0;
+	padding: 0;
 }

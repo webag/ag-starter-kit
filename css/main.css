@@ -404,7 +404,7 @@ input[type="text"]:focus:-ms-input-placeholder, input[type="tel"]:focus:-ms-inpu
 
 .btn {
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: top;
   position: relative;
   padding: 5px 20px;
   font-size: 14px;
@@ -424,6 +424,11 @@ input[type="text"]:focus:-ms-input-placeholder, input[type="tel"]:focus:-ms-inpu
 
 .btn:focus {
   outline: none;
+}
+
+button::-moz-focus-inner {
+  border: 0;
+  padding: 0;
 }
 
 .agmodal {
