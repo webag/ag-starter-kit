@@ -552,11 +552,10 @@ html.agmodal--lock body {
 .agmodal__close:before, .agmodal__close:after {
   content: '';
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
+  top: 50%;
+  left: 50%;
+  margin-top: -0.5px;
+  margin-left: -10px;
   width: 20px;
   height: 1px;
   background-color: rgba(0, 0, 0, 0.5);
@@ -729,11 +728,10 @@ html.agmodal--lock body {
 .fancybox-close:before, .fancybox-close:after {
   content: '';
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
+  top: 50%;
+  left: 50%;
+  margin-top: -1px;
+  margin-left: -15px;
   width: 30px;
   height: 2px;
   background-color: rgba(0, 0, 0, 0.5);

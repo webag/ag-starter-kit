@@ -10,6 +10,7 @@
 			<input type="tel" name="user_tel" data-label="Телефон" placeholder="Введите телефон*" data-req="true">
 			<input type="hidden" value="Новая заявка" name="form_subject">
 			<button type="submit" class="btn">Отправить</button>
+			<a href="#" class="btn">Отправить</a>
 		</form>
 	</div>
 
