@@ -196,13 +196,14 @@
 
 /*TRANSITIONS*/
 .mCSB_scrollTools,.mCSB_dragger_bar,.mCSB_buttonUp,.mCSB_buttonDown,.mCSB_buttonLeft,.mCSB_buttonRight{
-	transition: opacity .3s ease-in-out, background-color .3s ease-in-out;
+	transition: opacity .15s ease, background-color .15s ease;
 }
 /*TRANSITIONS*/
 
 
 /*THEME*/
 .mCSB_draggerRail{
+	border-radius: 16px;
 	background-color: #eee;
 }
 
