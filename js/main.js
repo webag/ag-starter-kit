@@ -111,9 +111,10 @@ $(document).ready(function(){
 Custom scrollbars BEGIN
 ***********************/
 $(document).ready(function(){
-	$(".selector").mCustomScrollbar({
+	$(".scroll").mCustomScrollbar({
 		axis:"y",
-		scrollInertia: 200
+		scrollInertia: 200,
+		scrollButtons:{ enable: true }
 	});
 });
 /***********************
