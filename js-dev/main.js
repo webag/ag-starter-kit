@@ -36,13 +36,14 @@ $(document).ready(function(){
 				cache: false,
 				contentType: false,
 				processData: false,
-				data: form_data
-			}).success(function(result) {
-				console.log(result);
-				form.parents('.agmodal').agmodal('close');
-				$('#modal-spasibo').agmodal('open');
-				setTimeout(function() {$('#modal-spasibo').agmodal('close');},4500);
-				form[0].reset();
+				data: form_data,
+				success: (function(result) {
+					console.log(result);
+					form.parents('.agmodal').agmodal('close');
+					$('#modal-spasibo').agmodal('open');
+					setTimeout(function() {$('#modal-spasibo').agmodal('close');},4500);
+					form[0].reset();
+				})
 			});
 		}
 	});

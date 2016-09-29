@@ -19,7 +19,7 @@
 
 					current_modal__wrapper.css('background-color', settings.overlayColor);
 					$(document).trigger('agmodal.inited');
-				};
+				}
 			});
 		},
 
@@ -52,8 +52,8 @@
 					var preloader_html = "<div class='agmodal__video-preloader'><span></span></div>";
 					current_modal.prepend(video_html);
 					current_modal.prepend(preloader_html);
-					
-					xhr = new XMLHttpRequest();
+
+					var xhr = new XMLHttpRequest();
 					xhr.open('GET', video_src, true);
 					xhr.responseType = 'blob';
 					xhr.onprogress = function(e) {
@@ -65,8 +65,8 @@
 							total = 86100000;
 							$('.agmodal__video-preloader span').text(parseInt( (e.loaded / total * 100), 10) + "%");
 						}
-					}
-					xhr.onload = function(e) {
+					};
+					xhr.onload = function() {
 						if (this.status == 200) {
 							var current_video = current_modal.find('video').get(0);
 							var myBlob = this.response;
@@ -76,10 +76,10 @@
 							current_modal.find('.agmodal__video-preloader').remove();
 							current_video.oncanplay = function() {
 								current_video.play();
-							}
+							};
 							current_modal.find('video').addClass('downloaded');
 						}
-					}
+					};
 
 					xhr.send();
 				} else {
@@ -111,7 +111,6 @@
 				current_modal.find('video').get(0).pause();
 			}
 
-
 			if (current_modal.attr('data-video')) {
 				if (!current_modal.find('video').hasClass('downloaded')) {
 					current_modal.find('video').get(0).pause();
@@ -134,15 +133,15 @@
 	};
 
 	// определяем ширину скроллбара
-	$(window).load(function(){
+	$(window).on('load',function(){
 		var HTML,w1,w2,scrollWidth;
-		HTML = $("html"),
-			w1 = $(window).width();
+		HTML = $("html");
+		w1 = $(window).width();
 		HTML.addClass('agmodal--lock-test');
 		w2 = $(window).width();
 		HTML.removeClass('agmodal--lock-test');
 		scrollWidth = w2 - w1;
-		$("<style type='text/css'>.agmodal--lock{margin-right:" + scrollWidth + "px !important;}</style>").appendTo("body");
+		$("<style type='text/css'>.agmodal--lock{margin-right:" + scrollWidth + "px !important;}</style>").appendTo("head");
 	});
 	// определяем ширину скроллбара
 
@@ -156,11 +155,11 @@
 	});
 
 	$(document).on('agmodal.inited', function() {
-		$('.agmodal__close').click(function(e){
+		$('.agmodal__close').click(function(){
 			$(this).parent('.agmodal').agmodal('close');
 		});
 
-		$('.agmodal__wrapper').click(function(e){
+		$('.agmodal__wrapper').click(function(){
 			$(this).find('.agmodal').agmodal('close');
 		}).children().click(function(e){
 			e.stopPropagation();
