@@ -507,7 +507,7 @@ html.agmodal--lock body {
   width: 100%;
   top: 0;
   left: 0;
-  z-index: 9999;
+  z-index: -100;
   transition: all 0.4s ease;
   cursor: pointer;
   overflow: auto;
@@ -528,6 +528,7 @@ html.agmodal--lock body {
 .agmodal__wrapper--visible {
   pointer-events: auto;
   opacity: 1;
+  z-index: 9999;
 }
 
 .agmodal__wrapper * {
@@ -539,10 +540,10 @@ html.agmodal--lock body {
   cursor: pointer;
   transition: all 0.3s ease;
   background-color: #e3e3e3;
-  width: 35px;
-  height: 35px;
-  top: 0px;
-  right: 0px;
+  width: 36px;
+  height: 36px;
+  top: 0;
+  right: 0;
 }
 
 .agmodal__close:hover {
@@ -715,8 +716,8 @@ html.agmodal--lock body {
   cursor: pointer;
   transition: all 0.3s ease;
   background-color: #e3e3e3;
-  width: 35px;
-  height: 35px;
+  width: 36px;
+  height: 36px;
   top: 0px;
   right: 0px;
 }

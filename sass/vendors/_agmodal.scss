@@ -69,7 +69,7 @@ html.agmodal--lock{
 	width: 100%;
 	top: 0;
 	left: 0;
-	z-index: 9999;
+	z-index: -100;
 	transition: all 0.4s ease;
 	cursor: pointer;
 	overflow: auto;
@@ -91,6 +91,7 @@ html.agmodal--lock{
 	&--visible{
 		pointer-events: auto;
 		opacity: 1;
+		z-index: 9999;
 	}
 
 	& *{
@@ -102,8 +103,8 @@ html.agmodal--lock{
 
 .agmodal__close{
 	@include cross(20px,1px,rgba(0,0,0,0.5),#000);
-	top: 0px;
-	right: 0px;
+	top: 0;
+	right: 0;
 }
 
 .agmodal__video-preloader{
