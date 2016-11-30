@@ -415,9 +415,9 @@ input[type="text"]:focus:-ms-input-placeholder, input[type="tel"]:focus:-ms-inpu
   cursor: pointer;
   transition: all 0.3s ease;
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   background-color: #DDD;
   border: 1px solid #DDD;
 }
@@ -441,8 +441,8 @@ button::-moz-focus-inner {
   padding: 30px 35px 30px 35px;
   transition: all 0.4s ease;
   -webkit-transform-origin: center top;
-      -ms-transform-origin: center top;
-          transform-origin: center top;
+  -ms-transform-origin: center top;
+  transform-origin: center top;
   cursor: auto;
   display: none;
 }
@@ -453,17 +453,17 @@ button::-moz-focus-inner {
 
 .agmodal--slide {
   -webkit-transform: translate3d(0, -500px, 0);
-          transform: translate3d(0, -500px, 0);
+  transform: translate3d(0, -500px, 0);
 }
 
 .agmodal--scale {
   -webkit-transform: scale3d(0.9, 0.9, 1);
-          transform: scale3d(0.9, 0.9, 1);
+  transform: scale3d(0.9, 0.9, 1);
 }
 
 .agmodal--3d {
   -webkit-transform: perspective(1000px) rotateX(45deg);
-          transform: perspective(1000px) rotateX(45deg);
+  transform: perspective(1000px) rotateX(45deg);
 }
 
 .agmodal--morph {
@@ -471,12 +471,12 @@ button::-moz-focus-inner {
   transition: transform 0.4s cubic-bezier(0.7, 0, 0.3, 1), opacity 0.4s ease, width 0.4s ease;
   transition: transform 0.4s cubic-bezier(0.7, 0, 0.3, 1), opacity 0.4s ease, width 0.4s ease, -webkit-transform 0.4s cubic-bezier(0.7, 0, 0.3, 1);
   -webkit-transform: translate3d(-400px, 0, 0) scale3d(1.4, 0.5, 1);
-          transform: translate3d(-400px, 0, 0) scale3d(1.4, 0.5, 1);
+  transform: translate3d(-400px, 0, 0) scale3d(1.4, 0.5, 1);
 }
 
 .agmodal--visible {
   -webkit-transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
-          transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+  transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
   opacity: 1;
 }
 
@@ -512,6 +512,8 @@ html.agmodal--lock body {
   cursor: pointer;
   overflow: auto;
   overflow-y: scroll;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   pointer-events: none;
   opacity: 0;
@@ -532,6 +534,8 @@ html.agmodal--lock body {
 }
 
 .agmodal__wrapper * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -569,14 +573,14 @@ html.agmodal--lock body {
 
 .agmodal__close:before {
   -webkit-transform: rotate(-45deg);
-      -ms-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 
 .agmodal__close:after {
   -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-          transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 .agmodal__video-preloader {
@@ -584,8 +588,8 @@ html.agmodal--lock body {
   width: 100%;
   top: 50%;
   -webkit-transform: translate(0, -50%);
-      -ms-transform: translate(0, -50%);
-          transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
   text-align: center;
   z-index: 10;
   font-size: 64px;
@@ -628,6 +632,8 @@ html.agmodal--lock body {
 }
 
 .fancybox-opened .fancybox-skin {
+  -webkit-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
 }
 
@@ -680,6 +686,8 @@ html.agmodal--lock body {
   border-radius: 50%;
   border: 3px solid #666;
   -webkit-animation: fanload 2s infinite linear;
+  -moz-animation: fanload 2s infinite linear;
+  -o-animation: fanload 2s infinite linear;
   animation: fanload 2s infinite linear;
 }
 
@@ -689,7 +697,20 @@ html.agmodal--lock body {
   }
   50% {
     -webkit-transform: scale(0.7);
-            transform: scale(0.7);
+    transform: scale(0.7);
+    border-color: white;
+  }
+  100% {
+    border-color: #666;
+  }
+}
+
+@-moz-keyframes fanload {
+  0% {
+    border-color: #666;
+  }
+  50% {
+    transform: scale(0.7);
     border-color: white;
   }
   100% {
@@ -703,7 +724,7 @@ html.agmodal--lock body {
   }
   50% {
     -webkit-transform: scale(0.7);
-            transform: scale(0.7);
+    transform: scale(0.7);
     border-color: white;
   }
   100% {
@@ -746,14 +767,14 @@ html.agmodal--lock body {
 
 .fancybox-close:before {
   -webkit-transform: rotate(-45deg);
-      -ms-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 
 .fancybox-close:after {
   -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-          transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 .fancybox-nav {
@@ -792,8 +813,8 @@ html.agmodal--lock body {
   box-sizing: border-box;
   left: 10px;
   -webkit-transform: translate(-20px, 0);
-      -ms-transform: translate(-20px, 0);
-          transform: translate(-20px, 0);
+  -ms-transform: translate(-20px, 0);
+  transform: translate(-20px, 0);
 }
 
 .fancybox-prev span:before, .fancybox-prev span:after {
@@ -808,15 +829,15 @@ html.agmodal--lock body {
 .fancybox-prev span:before {
   top: 0%;
   -webkit-transform: rotate(-45deg);
-      -ms-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 
 .fancybox-prev span:after {
   top: 100%;
   -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-          transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 .fancybox-next span {
@@ -824,8 +845,8 @@ html.agmodal--lock body {
   box-sizing: border-box;
   right: 10px;
   -webkit-transform: translate(20px, 0);
-      -ms-transform: translate(20px, 0);
-          transform: translate(20px, 0);
+  -ms-transform: translate(20px, 0);
+  transform: translate(20px, 0);
 }
 
 .fancybox-next span:before, .fancybox-next span:after {
@@ -840,22 +861,22 @@ html.agmodal--lock body {
 .fancybox-next span:before {
   top: 0;
   -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-          transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 .fancybox-next span:after {
   top: 100%;
   -webkit-transform: rotate(-45deg);
-      -ms-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 
 .fancybox-nav:hover span {
   opacity: 1;
   -webkit-transform: translate(0, 0);
-      -ms-transform: translate(0, 0);
-          transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
 }
 
 .fancybox-tmp {
