@@ -493,12 +493,6 @@ button::-moz-focus-inner {
   display: block;
 }
 
-html, body {
-  -webkit-overflow-scrolling: touch !important;
-  overflow: auto !important;
-  height: 100% !important;
-}
-
 html.agmodal--lock-test {
   overflow-y: hidden !important;
 }
