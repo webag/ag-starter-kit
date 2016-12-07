@@ -69,15 +69,15 @@ html.agmodal--lock{
 	top: 0;
 	left: 0;
 	z-index: -100;
-	transition: opacity 0.4s ease;
+	transition: all 0.4s ease;
 	cursor: pointer;
 	overflow: auto;
 	overflow-y: scroll;
-	-webkit-overflow-scrolling: touch;
 	box-sizing: border-box;
+	pointer-events: none;
 	opacity: 0;
 	visibility: hidden;
-	@media (max-width: 1200px) {
+	@media (max-width: 1200px){
 		display: none;
 		transition: none;
 	}
@@ -91,10 +91,11 @@ html.agmodal--lock{
 	}
 
 	&--visible{
-		z-index: 5000;
 		display: block;
 		visibility: visible;
+		pointer-events: auto;
 		opacity: 1;
+		z-index: 9999;
 	}
 
 	& *{
