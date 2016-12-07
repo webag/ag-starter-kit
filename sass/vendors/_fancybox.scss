@@ -145,6 +145,9 @@ $fancyColor: #666;
 	z-index: 50;
 	opacity: 0;
 	transition: all 0.3s ease;
+	@include res(l){
+		opacity: 1;
+	}
 }
 
 .fancybox-prev span{
@@ -152,6 +155,9 @@ $fancyColor: #666;
 	box-sizing: border-box;
 	left: 10px;
 	transform: translate(-20px,0);
+	@include res(l){
+		transform: none;
+	}
 
 	&:before,&:after{
 		content: '';
@@ -163,7 +169,7 @@ $fancyColor: #666;
 	}
 
 	&:before{
-		top: 0%;
+		top: 0;
 		transform: rotate(-45deg);
 	}
 
@@ -179,6 +185,9 @@ $fancyColor: #666;
 	box-sizing: border-box;
 	right: 10px;
 	transform: translate(20px,0);
+	@include res(l){
+		transform: none;
+	}
 
 	&:before,&:after{
 		content: '';

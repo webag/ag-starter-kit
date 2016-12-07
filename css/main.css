@@ -518,7 +518,7 @@ html.agmodal--lock body {
   visibility: hidden;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1024px) {
   .agmodal__wrapper {
     display: none;
     transition: none;
@@ -814,6 +814,12 @@ html.agmodal--lock body {
   transition: all 0.3s ease;
 }
 
+@media (max-width: 1024px) {
+  .fancybox-nav span {
+    opacity: 1;
+  }
+}
+
 .fancybox-prev span {
   cursor: pointer;
   box-sizing: border-box;
@@ -821,6 +827,14 @@ html.agmodal--lock body {
   -webkit-transform: translate(-20px, 0);
   -ms-transform: translate(-20px, 0);
   transform: translate(-20px, 0);
+}
+
+@media (max-width: 1024px) {
+  .fancybox-prev span {
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+  }
 }
 
 .fancybox-prev span:before, .fancybox-prev span:after {
@@ -833,7 +847,7 @@ html.agmodal--lock body {
 }
 
 .fancybox-prev span:before {
-  top: 0%;
+  top: 0;
   -webkit-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
@@ -853,6 +867,14 @@ html.agmodal--lock body {
   -webkit-transform: translate(20px, 0);
   -ms-transform: translate(20px, 0);
   transform: translate(20px, 0);
+}
+
+@media (max-width: 1024px) {
+  .fancybox-next span {
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+  }
 }
 
 .fancybox-next span:before, .fancybox-next span:after {

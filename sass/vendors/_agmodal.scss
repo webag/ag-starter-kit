@@ -77,7 +77,7 @@ html.agmodal--lock{
 	pointer-events: none;
 	opacity: 0;
 	visibility: hidden;
-	@media (max-width: 1200px){
+	@include res(l){
 		display: none;
 		transition: none;
 	}
