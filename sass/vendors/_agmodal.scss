@@ -10,6 +10,7 @@
 	transform-origin: center top;
 	cursor: auto;
 	display: none;
+	will-change: opacity,tranform;
 
 	&--fade{
 		opacity: 0;
@@ -63,6 +64,7 @@ html.agmodal--lock{
 }
 
 .agmodal__wrapper{
+	display: block;
 	position: fixed;
 	height: 100%;
 	width: 100%;
@@ -73,6 +75,7 @@ html.agmodal--lock{
 	cursor: pointer;
 	overflow: auto;
 	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
 	box-sizing: border-box;
 	pointer-events: none;
 	opacity: 0;
@@ -98,15 +101,24 @@ html.agmodal--lock{
 		z-index: 9999;
 	}
 
+	&--center{
+		display: flex;
+		align-items: center;
+		@include res(l){
+			display: none;
+		}
+		&.agmodal__wrapper--visible{
+			display: flex;
+		}
+	}
+
 	& *{
 		box-sizing: border-box;
 	}
 }
 
 .agmodal__close{
-	@include cross(20px,1px,rgba(0,0,0,0.5),#000);
-	top: 0;
-	right: 0;
+	@include cross();
 }
 
 .agmodal__video-preloader{

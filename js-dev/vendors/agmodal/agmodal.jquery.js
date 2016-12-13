@@ -1,19 +1,26 @@
 (function( $ ){
 
+	var settings  = {
+		overlayColor: 'rgba(44, 55, 73, 0.9)',
+		effect: 'fade', //slide,scale,3d,morph,
+		center: false
+	};
+
 	var methods = {
 
 		init : function( options ) {
-
-			var settings = $.extend({
-				overlayColor: 'rgba(44, 55, 73, 0.9)',
-				effect: 'scale' //slide,scale,3d,morph
-			}, options);
+			settings = $.extend( settings, options);
 
 			return this.each(function(){
 				var current_modal = $(this);
+				var class__center = "";
+
 				if (!current_modal.parent('.agmodal__wrapper').length) {
 					current_modal.append('<a class="agmodal__close"></a>');
-					$(this).wrap('<div class="agmodal__wrapper" tabindex="-1"></div>');
+					if (settings.center) {
+						class__center = "agmodal__wrapper--center";
+					}
+					$(this).wrap('<div class="agmodal__wrapper ' + class__center + ' " tabindex="-1"></div>');
 					current_modal.addClass('agmodal--' + settings.effect);
 					var current_modal__wrapper = current_modal.parent('.agmodal__wrapper');
 
@@ -30,11 +37,11 @@
 			$('html').addClass('agmodal--lock');
 			current_modal__wrapper.addClass('agmodal__wrapper--visible');
 			current_modal.addClass('agmodal--visible');
+			current_modal.agmodal('checkHeights');
 
 			setTimeout( function() {
 				$('.agmodal__wrapper--visible').focus();
 			},400);
-
 
 			// video open
 			if (current_modal.find('video').length) {
@@ -128,6 +135,22 @@
 
 			current_modal.trigger('agmodal.closed');
 			return this;
+		},
+
+		checkHeights : function() {
+			var current_modal = $(this);
+			var current_modal__wrapper = current_modal.parent('.agmodal__wrapper');
+			var window_height = $(window).height();
+			var modal_height = current_modal.outerHeight();
+			console.log();
+
+			if (window_height < (modal_height + 110)){
+				current_modal__wrapper.removeClass('agmodal__wrapper--center');
+			} else if (settings.center) {
+				current_modal__wrapper.addClass('agmodal__wrapper--center');
+			}
+
+			return this;
 		}
 
 	};
@@ -142,8 +165,13 @@
 		HTML.removeClass('agmodal--lock-test');
 		scrollWidth = w2 - w1;
 		$("<style type='text/css'>.agmodal--lock{margin-right:" + scrollWidth + "px !important;}</style>").appendTo("head");
+		
 	});
 	// определяем ширину скроллбара
+
+	$(window).on('resize',function(){
+		$('.agmodal--visible').agmodal('checkHeights');
+	});
 
 	$(document).ready(function() {
 		$('*[data-ag]').click(function(e){

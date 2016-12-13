@@ -12,6 +12,7 @@
 			<li>Экстренная помощь MIG</li>
 		</ul>
 		<a href="#" data-ag="modal-call">Открыть модальное окно</a>
+		<a href="#" data-ag="modal-second">Открыть модальное окно</a>
 		<a href="#" class="fancy" rel="1">Открыть fancy</a>
 		<a href="#" class="fancy" rel="1">Открыть fancy 2</a>
 

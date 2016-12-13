@@ -57,18 +57,27 @@
 
 
 /// Иоконка закрытия модальных окон в виде креста.
-/// @access public
-/// @param {String} $cross_size - размер иконки
-@mixin cross($cross_size,$cross_weight,$color,$hover-color) {
+$full_cross_size: 36px;
+$cross_size: 20px;
+$cross_weight: 2px;
+$cross_color: #FFF;
+$cross-color--hover: #000;
+$cross-bg-color: #000;
+$cross-bg-color--hover: #fffb42;
+
+@mixin cross() {
 	position: absolute;
+	top: -$full_cross_size/2;
+	right: -$full_cross_size/2;
 	cursor: pointer;
 	transition: all 0.3s ease;
-	background-color: #e3e3e3;
-	width: 36px;
-	height: 36px;
+	background-color: $cross-bg-color;
+	width: $full_cross_size;
+	height: $full_cross_size;
+	border-radius: 50%;
 
 	&:hover{
-		background-color: #555;
+		background-color: $cross-bg-color--hover;
 	}
 
 	&:before,&:after{
@@ -80,12 +89,12 @@
 		margin-left: -$cross_size/2;
 		width: $cross_size;
 		height: $cross_weight;
-		background-color: $color;
+		background-color: $cross_color;
 		transition: all 0.3s ease;
 	}
 
 	&:hover:before,&:hover:after{
-		background-color: $hover-color;
+		background-color: $cross-color--hover;
 	}
 
 	&:before{
