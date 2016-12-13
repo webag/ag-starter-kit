@@ -142,7 +142,6 @@
 			var current_modal__wrapper = current_modal.parent('.agmodal__wrapper');
 			var window_height = $(window).height();
 			var modal_height = current_modal.outerHeight();
-			console.log();
 
 			if (window_height < (modal_height + 110)){
 				current_modal__wrapper.removeClass('agmodal__wrapper--center');
@@ -165,7 +164,6 @@
 		HTML.removeClass('agmodal--lock-test');
 		scrollWidth = w2 - w1;
 		$("<style type='text/css'>.agmodal--lock{margin-right:" + scrollWidth + "px !important;}</style>").appendTo("head");
-		
 	});
 	// определяем ширину скроллбара
 

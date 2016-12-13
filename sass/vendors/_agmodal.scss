@@ -12,6 +12,15 @@
 	display: none;
 	will-change: opacity,tranform;
 
+	&:after{
+		content: '';
+		position: absolute;
+		bottom: -50px;
+		left: 0;
+		width: 100%;
+		height: 50px;
+	}
+
 	&--fade{
 		opacity: 0;
 	}
@@ -21,7 +30,7 @@
 	}
 
 	&--scale{
-		transform: scale3d(0.9,0.9,1);
+		transform: scale3d(0.9,0.9,0.9);
 	}
 
 	&--3d{
@@ -52,22 +61,14 @@
 	}
 }
 
-html.agmodal--lock-test{
-	overflow-y: hidden !important;
-}
-
-html.agmodal--lock{
-
-	body{
-		overflow: hidden !important;
-	}
-}
-
 .agmodal__wrapper{
-	display: block;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
 	position: fixed;
 	height: 100%;
 	width: 100%;
+	padding: 0 20px;
 	top: 0;
 	left: 0;
 	z-index: -100;
@@ -84,6 +85,9 @@ html.agmodal--lock{
 		display: none;
 		transition: none;
 	}
+	@include res(s){
+		padding: 0;
+	}
 
 	.agmodal{
 		display: block;
@@ -94,7 +98,7 @@ html.agmodal--lock{
 	}
 
 	&--visible{
-		display: block;
+		display: flex;
 		visibility: visible;
 		pointer-events: auto;
 		opacity: 1;
@@ -102,14 +106,7 @@ html.agmodal--lock{
 	}
 
 	&--center{
-		display: flex;
 		align-items: center;
-		@include res(l){
-			display: none;
-		}
-		&.agmodal__wrapper--visible{
-			display: flex;
-		}
 	}
 
 	& *{
@@ -129,4 +126,16 @@ html.agmodal--lock{
 	text-align: center;
 	z-index: 10;
 	font-size: 64px;
+}
+
+html{
+	&.agmodal--lock-test{
+		overflow-y: hidden !important;
+	}
+
+	&.agmodal--lock{
+		body{
+			overflow: hidden !important;
+		}
+	}
 }

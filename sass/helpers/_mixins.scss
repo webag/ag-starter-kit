@@ -75,6 +75,10 @@ $cross-bg-color--hover: #fffb42;
 	width: $full_cross_size;
 	height: $full_cross_size;
 	border-radius: 50%;
+	@include res(s){
+		top: 5px;
+		right: 5px;
+	}
 
 	&:hover{
 		background-color: $cross-bg-color--hover;

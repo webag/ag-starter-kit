@@ -82,7 +82,7 @@ agmodal BEGIN
 ***********************/
 $(document).ready(function(){
 	$('.agmodal').agmodal({
-		effect: 'fade',
+		effect: 'scale',
 		overlayColor: 'rgba(44, 55, 73, 0.9)',
 		center: true
 	});
