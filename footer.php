@@ -1,7 +1,7 @@
 <!-- Модальные окна -->
 <div class="modals-sec">
 
-	<div id="modal-call" class="agmodal">
+	<div id="modal-call" class="modal">
 		<p>Заказать обратный звонок</p>
 		<p>Оставьте заявку и наш администратор свяжется<br>с&nbsp;Вами в течение 10 минут</p>
 		<form class="ajax-form">
@@ -28,7 +28,7 @@
 		<p>Оставьте заявку и наш администратор свяжется<br>с&nbsp;Вами в течение 10 минут</p>
 	</div>
 
-	<div id="modal-second" class="agmodal">
+	<div id="modal-second" class="modal">
 		<p>Заказать обратный звонок</p>
 		<p>Оставьте заявку и наш администратор свяжется<br>с&nbsp;Вами в течение 10 минут</p>
 		<form class="ajax-form">
@@ -41,7 +41,7 @@
 		</form>
 	</div>
 
-	<div id="modal-spasibo" class="agmodal">
+	<div id="modal-spasibo" class="modal">
 		<p class="agmodal__title">Спасибо за заявку!</p>
 	</div>
 

@@ -437,7 +437,7 @@ button::-moz-focus-inner {
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
   width: 450px;
   max-width: 100%;
-  margin: 50px auto;
+  margin: 50px 0;
   padding: 30px 35px 30px 35px;
   transition: all 0.4s ease;
   -webkit-transform-origin: center top;
@@ -503,6 +503,11 @@ button::-moz-focus-inner {
   display: block;
 }
 
+.agmodal img {
+  max-width: 100%;
+  height: auto;
+}
+
 .agmodal__wrapper {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -531,14 +536,14 @@ button::-moz-focus-inner {
   visibility: hidden;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1025px) {
   .agmodal__wrapper {
     display: none;
     transition: none;
   }
 }
 
-@media (max-width: 680px) {
+@media (max-width: 640px) {
   .agmodal__wrapper {
     padding: 0;
   }

@@ -81,10 +81,12 @@ fancybox END
 agmodal BEGIN
 ***********************/
 $(document).ready(function(){
-	$('.agmodal').agmodal({
-		effect: 'scale',
+	$('.modal').agmodal({
+		effect: 'fade',
 		overlayColor: 'rgba(44, 55, 73, 0.9)',
-		center: true
+		center: false,
+		video: false,
+		videoAjax: false
 	});
 });
 /***********************
