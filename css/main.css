@@ -431,6 +431,10 @@ button::-moz-focus-inner {
   padding: 0;
 }
 
+.modal {
+  display: none;
+}
+
 .agmodal {
   position: relative;
   background: #f7f8f9;
