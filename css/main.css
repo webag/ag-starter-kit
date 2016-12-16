@@ -459,6 +459,7 @@ button::-moz-focus-inner {
   left: 0;
   width: 100%;
   height: 50px;
+  pointer-events: none;
 }
 
 .agmodal--fade {
@@ -593,7 +594,7 @@ button::-moz-focus-inner {
   border-radius: 50%;
 }
 
-@media (max-width: 680px) {
+@media (max-width: 640px) {
   .agmodal__close {
     top: 5px;
     right: 5px;
