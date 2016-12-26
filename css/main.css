@@ -594,7 +594,7 @@ button::-moz-focus-inner {
   border-radius: 50%;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 680px) {
   .agmodal__close {
     top: 5px;
     right: 5px;

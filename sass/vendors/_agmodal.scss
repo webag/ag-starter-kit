@@ -120,57 +120,9 @@
 	}
 }
 
-$full_cross_size: 36px;
-$cross_size: 20px;
-$cross_weight: 2px;
-$cross_color: #FFF;
-$cross-color--hover: #000;
-$cross-bg-color: #000;
-$cross-bg-color--hover: #fffb42;
 
 .agmodal__close{
-	position: absolute;
-	top: -$full_cross_size/2;
-	right: -$full_cross_size/2;
-	cursor: pointer;
-	transition: all 0.3s ease;
-	background-color: $cross-bg-color;
-	width: $full_cross_size;
-	height: $full_cross_size;
-	border-radius: 50%;
-	@media (max-width: 640px){
-		top: 5px;
-		right: 5px;
-	}
-
-	&:hover{
-		background-color: $cross-bg-color--hover;
-	}
-
-	&:before,&:after{
-		content: '';
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		margin-top: -$cross_weight/2;
-		margin-left: -$cross_size/2;
-		width: $cross_size;
-		height: $cross_weight;
-		background-color: $cross_color;
-		transition: all 0.3s ease;
-	}
-
-	&:hover:before,&:hover:after{
-		background-color: $cross-color--hover;
-	}
-
-	&:before{
-		transform: rotate(-45deg);
-	}
-
-	&:after{
-		transform: rotate(45deg);
-	}
+	@include cross();
 }
 
 .agmodal__video-preloader{
