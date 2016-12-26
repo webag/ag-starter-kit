@@ -39,7 +39,9 @@ $(document).ready(function(){
 				data: form_data,
 				success: (function(result) {
 					console.log(result);
-					form.parents('.agmodal').agmodal('close');
+					if( form.parents('.agmodal').length){
+						form.parents('.agmodal').agmodal('close');
+					}
 					$('#modal-spasibo').agmodal('open');
 					setTimeout(function() {$('#modal-spasibo').agmodal('close');},4500);
 					form[0].reset();
