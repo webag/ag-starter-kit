@@ -86,7 +86,6 @@ $(document).ready(function(){
 	$('.modal').agmodal({
 		effect: 'fade',
 		overlayColor: 'rgba(44, 55, 73, 0.9)',
-		center: false,
 		video: false,
 		videoAjax: false
 	});
