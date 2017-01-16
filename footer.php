@@ -42,7 +42,7 @@
 	</div>
 
 	<div id="modal-spasibo" class="modal">
-		<p class="agmodal__title">Спасибо за заявку!</p>
+		<p>Спасибо за заявку!</p>
 	</div>
 
 </div>
