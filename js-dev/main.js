@@ -85,9 +85,7 @@ agmodal BEGIN
 $(document).ready(function(){
 	$('.modal').agmodal({
 		effect: 'fade',
-		overlayColor: 'rgba(44, 55, 73, 0.9)',
-		video: false,
-		videoAjax: false
+		overlayColor: 'rgba(44, 55, 73, 0.9)'
 	});
 });
 /***********************
