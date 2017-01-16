@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/ikea.iml" filepath="$PROJECT_DIR$/.idea/ikea.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/ag-starter-kit.iml" filepath="$PROJECT_DIR$/.idea/ag-starter-kit.iml" />
     </modules>
   </component>
 </project>
