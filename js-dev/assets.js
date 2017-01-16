@@ -1,4 +1,3 @@
-//@prepros-prepend vendors/jquery-2.2.4.min.js
 //@prepros-append vendors/agmodal/agmodal.jquery.js
 //@prepros-append vendors/maskedinput.js
 //@prepros-append vendors/fancy/fancybox.js

@@ -22,8 +22,6 @@
 	<!-- og -->
 
 	<link href="css/main.css" rel="stylesheet">
-	<script src="js/assets.js" type="text/javascript" ></script>
-	<script src="js/main.js" type="text/javascript" ></script>
 </head>
 
 <body>
