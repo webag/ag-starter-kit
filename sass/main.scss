@@ -2,6 +2,10 @@
 @import 'helpers/mixins';
 @import 'helpers/placeholders';
 
+@import 'vendors/agmodal';
+@import 'vendors/fancybox';
+@import 'vendors/scrollbar';
+
 @import 'modules/reset';
 @import 'modules/fonts';
 @import 'modules/icons';
@@ -10,9 +14,5 @@
 @import 'modules/forms';
 @import 'modules/buttons';
 @import 'modules/modals';
-
-@import 'vendors/agmodal';
-@import 'vendors/fancybox';
-@import 'vendors/scrollbar';
 
 @import 'pages/home';
