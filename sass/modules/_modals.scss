@@ -2,18 +2,24 @@
 	display: none;
 	width: 500px;
 	max-width: 100%;
-	transition: transform 0.4s ease;
-	transform: scale3d(0.95,0.95,0.95);
-	will-change: transform;
+	transition: transform 0.4s ease,opacity 0.4s ease;
+	transform: scale3d(0.9,0.9,0.9);
+	opacity: 0;
+	will-change: transform,opacity;
 }
 
-.fancybox-slide--complete .modal{
-	transform: none;
+.fancybox-slide--complete {
+	.modal {
+		transform: none;
+		opacity: 1;
+	}
 }
 
-.fancybox-container--closing .modal {
-	transform: scale(1.5);
-	opacity: 0.5;
+.fancybox-container--closing{
+	.modal {
+		transform: scale(1.5);
+		opacity: 0.5;
+	}
 }
 
 
