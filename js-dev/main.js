@@ -13,6 +13,18 @@ $(document).ready(function(){
 				$(this).addClass('error');
 				send = false;
 			}
+			if ($(this).is('select')){
+				if ($(this).val() === null) {
+					$(this).addClass('error');
+					send = false;
+				}
+			}
+			if ($(this).is('input[type="checkbox"]')){
+				if ($(this).prop('checked') !== true) {
+					$(this).addClass('error');
+					send = false;
+				}
+			}
 		});
 
 		$(this).find("[data-req='true']").on('focus', function(){
@@ -39,11 +51,9 @@ $(document).ready(function(){
 				data: form_data,
 				success: (function(result) {
 					console.log(result);
-					if( form.parents('.agmodal').length){
-						form.parents('.agmodal').agmodal('close');
-					}
-					$('#modal-spasibo').agmodal('open');
-					setTimeout(function() {$('#modal-spasibo').agmodal('close');},4500);
+					$.fancybox.close();
+					$.fancybox.open({src  : '#modal-thanks'});
+					setTimeout(function() {$.fancybox.close();},4500);
 					form[0].reset();
 				})
 			});
@@ -71,25 +81,44 @@ fancybox BEGIN
 ***********************/
 $(document).ready(function(){
 	$('.fancy').fancybox({
-		padding: 0
+		fullScreen: false,
+		slideShow: false,
+		thumbs: false,
+		smallBtn: 'auto',
+		focus: false
+	});
+	$('.fancy-video').fancybox({
+		fullScreen: false,
+		thumbs: false,
+		youtube: {
+			controls : 1,
+			showinfo : 0,
+			autoplay: 1
+		},
+		onUpdate : function( instance, current ) {
+			var width,
+				height,
+				ratio = 16 / 9,
+				video = current.$content;
+			if ( video ) {
+				video.hide();
+				width  = current.$slide.width() - 100;
+				height = current.$slide.height() - 100;
+				if ( height * ratio > width ) {
+					height = width / ratio;
+				} else {
+					width = height * ratio;
+				}
+				video.css({
+					width  : width,
+					height : height
+				}).show();
+			}
+		}
 	});
 });
 /***********************
 fancybox END
-***********************/
-
-
-/***********************
-agmodal BEGIN
-***********************/
-$(document).ready(function(){
-	$('.modal').agmodal({
-		effect: 'fade',
-		overlayColor: 'rgba(44, 55, 73, 0.9)'
-	});
-});
-/***********************
-agmodal END
 ***********************/
 
 

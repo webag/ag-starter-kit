@@ -11,10 +11,10 @@
 			<li>Экстренная помощь MIG</li>
 			<li>Экстренная помощь MIG</li>
 		</ul>
-		<a href="#" data-ag="modal-call">Открыть модальное окно</a>
-		<a href="#" data-ag="modal-second">Открыть модальное окно</a>
-		<a href="#" class="fancy" rel="1">Открыть fancy</a>
-		<a href="#" class="fancy" rel="1">Открыть fancy 2</a>
+
+		<a href="#" class="fancy btn" data-src="#modal-order-1">Открыть order</a>
+		<a href="#" class="fancy btn" data-src="#modal-order-2">Открыть order 2</a>
+		<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="fancy-video btn">Открыть youtube</a>
 
 		<div class="scroll">
 			<p>Джордан - так зовут рабочего - воспользовался передвижным туалетом на стройплощадке в Сиднее, как раз там, где пять месяцев назад с ним произошел подобный инцидент.</p>
@@ -30,7 +30,6 @@
 
 	</div>
 </section>
-
 
 
 <?php include('footer.php'); ?>

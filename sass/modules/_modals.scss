@@ -1,3 +1,19 @@
 .modal{
 	display: none;
+	width: 500px;
+	max-width: 100%;
+	transition: transform 0.4s ease;
+	transform: scale3d(0.95,0.95,0.95);
+	will-change: transform;
 }
+
+.fancybox-slide--complete .modal{
+	transform: none;
+}
+
+.fancybox-container--closing .modal {
+	transform: scale(1.5);
+	opacity: 0.5;
+}
+
+
