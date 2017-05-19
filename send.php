@@ -3,6 +3,7 @@ $subject = $_POST["form_subject"];
 $message = "";
 
 foreach ($_POST as $input_name => $input_val) {
+	$input_val = htmlspecialchars(strip_tags(trim($input_val)));
 	if ($input_name != "form_subject") {
 		if ( !strpos($input_name, '_label')){
 			$input_label = $input_name . '_label';
