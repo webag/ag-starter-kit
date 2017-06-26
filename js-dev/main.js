@@ -77,16 +77,20 @@ Input mask END
 
 
 /***********************
-fancybox BEGIN
-***********************/
-$(document).ready(function(){
+ fancybox BEGIN
+ ***********************/
+function init_fancy() {
 	$('.fancy').fancybox({
 		fullScreen: false,
 		slideShow: false,
 		thumbs: false,
-		smallBtn: 'auto',
-		focus: false
+		transitionEffect : "slide",
+		autoFocus : true,
+		backFocus : false,
+		animationDuration : 400
 	});
+}
+function init_fancy__video() {
 	$('.fancy-video').fancybox({
 		fullScreen: false,
 		thumbs: false,
@@ -116,10 +120,14 @@ $(document).ready(function(){
 			}
 		}
 	});
+}
+$(document).ready(function(){
+	init_fancy();
+	init_fancy__video();
 });
 /***********************
-fancybox END
-***********************/
+ fancybox END
+ ***********************/
 
 
 /***********************

@@ -5,11 +5,12 @@
 @import 'vendors/fancybox';
 @import 'vendors/scrollbar';
 
-@import 'modules/reset';
-@import 'modules/fonts';
-@import 'modules/icons';
-@import 'modules/typography';
-@import 'modules/grid';
+@import 'base/reset';
+@import 'base/fonts';
+@import 'base/icons';
+@import 'base/typography';
+@import 'base/grid';
+
 @import 'modules/forms';
 @import 'modules/buttons';
 @import 'modules/modals';
