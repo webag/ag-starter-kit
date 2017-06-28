@@ -68,7 +68,7 @@ $(document).ready(function(){
 /***********************
 Input mask BEGIN
 ***********************/
-jQuery(function($){
+$(function($){
 	$("input[type='tel']").mask("+7 (999) 999-99-99");
 });
 /***********************
@@ -132,19 +132,18 @@ $(document).ready(function(){
 
 /***********************
  Прокрутка к секциям BEGIN
-***********************/
+ ***********************/
 $(document).ready(function(){
 	$('.scrollto').click(function () {
 		var elementClick = $(this).attr("href");
 		var destination = $(elementClick).offset().top;
-		$('html').velocity( "scroll", { duration: 1000, easing: "easeInOutCubic", offset: destination, mobileHA: false });
-		$('body').velocity( "scroll", { duration: 1000, easing: "easeInOutCubic", offset: destination, mobileHA: false });
+		$('html,body').stop().animate({scrollTop:destination}, 1000);
 		return false;
 	});
 });
 /***********************
  Прокрутка к секциям END
-***********************/
+ ***********************/
 
 
 /***********************
