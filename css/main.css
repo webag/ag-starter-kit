@@ -373,21 +373,6 @@
   outline: none;
 }
 
-.fancybox-slide--iframe .fancybox-close-small {
-  top: 0;
-  right: -44px;
-}
-
-.fancybox-slide--iframe .fancybox-close-small:after {
-  background: transparent;
-  font-size: 35px;
-  color: #aaa;
-}
-
-.fancybox-slide--iframe .fancybox-close-small:hover:after {
-  color: #fff;
-}
-
 /* Caption */
 .fancybox-caption-wrap {
   bottom: 0;
