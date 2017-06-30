@@ -278,12 +278,18 @@
 
 .fancybox-slide--iframe .fancybox-content {
   padding: 0;
-  width: 80%;
+  width: 100%;
   height: 80%;
   max-width: calc(100% - 100px);
   max-height: calc(100% - 88px);
   overflow: visible;
   background: #fff;
+}
+
+@media (max-width: 680px) {
+  .fancybox-slide--iframe .fancybox-content {
+    max-width: calc(100% - 30px);
+  }
 }
 
 .fancybox-iframe {

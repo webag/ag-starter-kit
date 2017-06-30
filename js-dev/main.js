@@ -100,6 +100,8 @@ function init_fancy() {
 }
 function init_fancy__video() {
 	$('.fancy-video').fancybox({
+		toolbar: false,
+		smallBtn : true,
 		fullScreen: false,
 		thumbs: false,
 		youtube: {
@@ -114,7 +116,7 @@ function init_fancy__video() {
 				video = current.$content;
 			if ( video ) {
 				video.hide();
-				width  = current.$slide.width() - 100;
+				width  = current.$slide.width() - 30;
 				height = current.$slide.height() - 100;
 				if ( height * ratio > width ) {
 					height = width / ratio;
