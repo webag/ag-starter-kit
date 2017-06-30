@@ -85,7 +85,15 @@ function init_fancy() {
 		slideShow: false,
 		thumbs: false,
 		transitionEffect : "slide",
-		autoFocus : true,
+		autoFocus : false,
+		backFocus : false,
+		animationDuration : 400
+	});
+	$('.fancy-map').fancybox({
+		toolbar: false,
+		smallBtn : true,
+		transitionEffect : "slide",
+		autoFocus : false,
 		backFocus : false,
 		animationDuration : 400
 	});
