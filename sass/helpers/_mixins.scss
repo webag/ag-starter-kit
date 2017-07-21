@@ -1,50 +1,9 @@
-/// Управление отзывчивостью.
-/// @access public
-/// @param {String} $breakpoint - точка остановки
-/// @requires $breakpoints
 @mixin res($breakpoint) {
-	@if map-has-key($breakpoints, $breakpoint) {
-		@media #{inspect(map-get($breakpoints, $breakpoint))} {
-			@content;
-		}
-	} @else {
-		@error 'Не указано значение для `#{$breakpoint}`. ' + 'Пожалуйста, убедитесь, что точка остановки объявлена в карте `$breakpoints`.';
+	@media #{inspect(map-get($breakpoints, $breakpoint))} {
+		@content;
 	}
 }
 
-
-/// @param {String} $orientation - Type of gradient, either `vertical`, `horizontal` or `radial`
-/// @example scss - Usage
-///   .foo {
-///     @include background-gradient(red, black, 'vertical');
-///   }
-@mixin background-gradient($start-color, $end-color, $orientation) {
-	background: $start-color;
-
-	@if $orientation == 'vertical' {
-		background: -webkit-linear-gradient(top, $start-color, $end-color);
-		background: linear-gradient(to bottom, $start-color, $end-color);
-	} @else if $orientation == 'horizontal' {
-		background: -webkit-linear-gradient(left, $start-color, $end-color);
-		background: linear-gradient(to right, $start-color, $end-color);
-	} @else {
-		background: -webkit-radial-gradient(center, ellipse cover, $start-color, $end-color);
-		background: radial-gradient(ellipse at center, $start-color, $end-color);
-	}
-}
-
-/// @param {String} $name - Animation name
-@mixin keyframes($name) {
-	@-webkit-keyframes #{$name} {
-			@content;
-	}
-	@-moz-keyframes #{$name} {
-			@content;
-	}
-	@keyframes #{$name} {
-			@content;
-	}
-}
 
 @mixin placeholder {
 	$placeholders: ":-webkit-input" ":-moz" "-moz" "-ms-input";

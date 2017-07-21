@@ -1,3 +1,9 @@
+%grid {
+	flex-grow: 1;
+	flex-shrink: 1;
+	max-width: 100%;
+}
+
 .hidden{
 	display: none !important;
 }
@@ -5,22 +11,22 @@
 @for $i from 1 through 12 {
 	.grid-#{$i} {
 		@extend %grid;
-		width: 1 / 12 * $i * 100%;
+		width: 100% / 12 * $i;
+	}
+	.grid-off-#{$i} {
+		margin-left: 1 / 12 * $i * 100%;
 	}
 }
 
-@each $breakpoint,$value in $breakpoints {
+@each $breakpoint in $breakpoints {
 	@include res($breakpoint){
 		@for $i from 1 through 12 {
 			.grid-#{$i}_#{$breakpoint} {
-				width: 1 / 12 * $i * 100%;
+				width: 100% / 12 * $i;
 			}
-		}
-		.hidden_#{$breakpoint}{
-			display: none !important;
-		}
-		.visible_#{$breakpoint}{
-			display: block;
+			.grid-off-#{$i}_#{$breakpoint} {
+				margin-left: 1 / 12 * $i * 100%;
+			}
 		}
 	}
 }
@@ -30,6 +36,25 @@
 	width: 100%;
 	max-width: $container_width;
 	position: relative;
+	padding-left: 16px;
+	padding-right: 16px;
+}
+
+.row{
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: -$gutter;
+	margin-right: -$gutter;
+
+	[class^="grid"]{
+		padding-left: $gutter;
+		padding-right: $gutter;
+	}
+}
+
+.row-ng{
+	display: flex;
+	flex-wrap: wrap;
 }
 
 .clearfix{

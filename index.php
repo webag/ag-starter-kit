@@ -30,6 +30,19 @@
 			<p>Джордан - так зовут рабочего - воспользовался передвижным туалетом на стройплощадке в Сиднее, как раз там, где пять месяцев назад с ним произошел подобный инцидент</p>
 		</div>
 
+		<div class="row">
+			<div class="grid-3">3333</div>
+			<div class="grid-5">5555</div>
+			<div class="grid-4">4444</div>
+			<div class="grid-4 grid-off-3">4444</div>
+		</div>
+		<div class="row-ng">
+			<div class="grid-3">3333</div>
+			<div class="grid-5">5555</div>
+			<div class="grid-4">4444</div>
+			<div class="grid-4 grid-off-3">4444</div>
+		</div>
+
 	</div>
 </section>
 
