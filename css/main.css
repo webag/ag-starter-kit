@@ -1258,7 +1258,7 @@ a {
   margin-left: 100%;
 }
 
-@media null {
+@media (max-width: 1400px) {
   .grid-1_xl {
     width: 8.33333%;
   }
@@ -1333,7 +1333,7 @@ a {
   }
 }
 
-@media null {
+@media (max-width: 1024px) {
   .grid-1_l {
     width: 8.33333%;
   }
@@ -1408,7 +1408,7 @@ a {
   }
 }
 
-@media null {
+@media (max-width: 768px) {
   .grid-1_m {
     width: 8.33333%;
   }
@@ -1483,7 +1483,7 @@ a {
   }
 }
 
-@media null {
+@media (max-width: 680px) {
   .grid-1_s {
     width: 8.33333%;
   }
@@ -1558,7 +1558,7 @@ a {
   }
 }
 
-@media null {
+@media (max-width: 480px) {
   .grid-1_xs {
     width: 8.33333%;
   }

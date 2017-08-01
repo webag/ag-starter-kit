@@ -17,7 +17,7 @@
 	}
 }
 
-@each $breakpoint in $breakpoints {
+@each $breakpoint,$value in $breakpoints {
 	@include res($breakpoint){
 		@for $i from 1 through 12 {
 			.grid-#{$i}_#{$breakpoint} {
