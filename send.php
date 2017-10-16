@@ -45,10 +45,17 @@ if (isset($_FILES)) { //если есть файлы в форме
 }
 //Обрабатываем файлы
 
+//возвращаем массив с результатом
+$result = array();
+$result['MAIL_SUBJECT'] = $mail->Subject;
+$result['MAIL_BODY'] = $mail->Body;
+$result['MAIL_FROM'] = $mail->From;
+$result['MAIL_FROM_NAME'] = $mail->FromName;
 if(!$mail->send()){
-	echo 'Отправка почты не прошла.';
-	echo 'Mailer Error: ' . $mail->ErrorInfo;
+	$result['MAILER_CHECK'] = $mail->ErrorInfo;
 }else{
-	echo 'Mail OK';
+	$result['MAILER_CHECK'] = 'Mail OK';
 }
+$result = json_encode($result);
+echo $result;
 ?>

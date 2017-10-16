@@ -50,7 +50,8 @@ $(document).ready(function(){
 				processData: false,
 				data: form_data,
 				success: (function(result) {
-					console.log(result);
+					var result_from_server = JSON.parse(result);
+					console.log(result_from_server);
 					$.fancybox.close();
 					$.fancybox.open({src  : '#modal-thanks'});
 					setTimeout(function() {$.fancybox.close();},4500);
