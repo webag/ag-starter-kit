@@ -1,14 +1,14 @@
 $breakpoints: (
+	'xxl': (max-width: 1680px),
 	'xl': (max-width: 1400px),
 	'l': (max-width: 1024px),
 	'm': (max-width: 768px),
 	's': (max-width: 680px),
 	'xs': (max-width: 480px),
+	'xxs': (max-width: 375px),
 );
 
 $font: Segoe Ui, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
-
-$black: #353434;
 
 $container_width: 1000px;
 

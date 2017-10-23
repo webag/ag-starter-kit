@@ -49,6 +49,13 @@
 		padding-left: $gutter;
 		padding-right: $gutter;
 	}
+
+	&--center {
+		align-items: center;
+	}
+	&--middle {
+		justify-content: center;
+	}
 }
 
 .row-ng{

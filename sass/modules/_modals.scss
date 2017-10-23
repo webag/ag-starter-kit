@@ -3,7 +3,7 @@
 	width: 500px;
 	max-width: 100%;
 	transition: transform 0.4s ease,opacity 0.4s ease;
-	transform: translateY(-60px) scale(1.1);
+	transform: translate3d(0,-60px,0) scale(1.1);
 	opacity: 0;
 	will-change: transform,opacity;
 	overflow: visible;
@@ -12,13 +12,13 @@
 .fancybox-slide--current {
 	.modal {
 		opacity: 1;
-		transform: translateY(0) scale(1);
+		transform: translate3d(0,0,0) scale(1);
 	}
 }
 
 .fancybox-is-closing{
 	.modal {
-		transform: translateY(60px) scale(0.9);
+		transform: translate3d(0,60px,0) scale(0.9);
 		opacity: 0.5;
 	}
 }
