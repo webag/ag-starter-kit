@@ -53,8 +53,9 @@ $cross-bg-color--hover: #fffb42;
 		margin-left: -$cross_size/2;
 		width: $cross_size;
 		height: $cross_weight;
-		background-color: $cross_color;
+		background: $cross_color;
 		transition: all 0.3s ease;
+		border-radius: 0;
 	}
 
 	&:hover:before,&:hover:after{
@@ -71,5 +72,8 @@ $cross-bg-color--hover: #fffb42;
 
 	&:focus{
 		outline: none;
+		&:before,&:after{
+			outline: none;
+		}
 	}
 }

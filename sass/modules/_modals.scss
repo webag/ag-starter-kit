@@ -6,7 +6,11 @@
 	transform: translate3d(0,-60px,0) scale(1.1);
 	opacity: 0;
 	will-change: transform,opacity;
-	overflow: visible;
+	overflow: visible !important;
+
+	.fancybox-close-small{
+		@include cross();
+	}
 }
 
 .fancybox-slide--current {
@@ -22,5 +26,3 @@
 		opacity: 0.5;
 	}
 }
-
-

@@ -60,8 +60,8 @@ try {
 	$result = json_encode($result);
 	echo $result;
 } catch (Exception $e) {
-	$result = json_encode($mail->ErrorInfo);
-	echo 'Mailer Error: ' . $result;
+	$result['MAILER_CHECK'] = json_encode($mail->ErrorInfo);
+	echo $result;
 }
 
 ?>
