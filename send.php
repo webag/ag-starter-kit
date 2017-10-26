@@ -16,14 +16,19 @@ foreach ($_POST as $input_name => $input_val) {
 	}
 }
 
-require_once('phpmailer.php');
+
 use PHPMailer\PHPMailer\PHPMailer;
-$mail = new PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require_once('phpmailer.php');
+require_once('phpmailer_exception.php');
+
+$mail = new PHPMailer(true);
 
 try {
 	$mail->CharSet = 'utf-8';
 	$mail->setFrom('no-reply@mail.ru', 'Имя От Кого');
-	$mail->addAddress('andreiduffy@gmail.com');
+//	$mail->addAddress('andreiduffy@gmail.com');
 	$mail->isHTML(true);
 	$mail->Subject = $subject;
 	$mail->Body = $message;
@@ -57,11 +62,11 @@ try {
 
 	$mail->send();
 	$result['MAILER_CHECK'] = 'Mail OK';
-	$result = json_encode($result);
-	echo $result;
 } catch (Exception $e) {
-	$result['MAILER_CHECK'] = json_encode($mail->ErrorInfo);
-	echo $result;
+	$result['MAILER_CHECK'] = $e->errorMessage();
 }
+
+$result = json_encode($result);
+echo $result;
 
 ?>
