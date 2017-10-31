@@ -50,12 +50,16 @@ $(document).ready(function(){
 				processData: false,
 				data: form_data,
 				success: (function(result) {
-					var result_from_server = JSON.parse(result);
-					console.log(result_from_server);
+					var response = JSON.parse(result);
+					console.log(response);
 					$.fancybox.close();
-					$.fancybox.open({src  : '#modal-thanks'});
-					setTimeout(function() {$.fancybox.close();},4500);
-					form[0].reset();
+					if (response["MAILER_ERROR"] !== undefined){
+						$.fancybox.open({src  : '#modal-error'});
+					} else {
+						$.fancybox.open({src  : '#modal-thanks'});
+						setTimeout(function() {$.fancybox.close();},4500);
+						form[0].reset();
+					}
 				})
 			});
 		}
