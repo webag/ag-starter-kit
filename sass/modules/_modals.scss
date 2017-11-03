@@ -26,3 +26,18 @@
 		opacity: 0.5;
 	}
 }
+
+.fancybox-bg{
+	background: #8c8e9a;
+}
+
+.fancybox-slide--iframe .fancybox-close-small{
+	@include cross();
+}
+
+.fancybox-slide--iframe .fancybox-content{
+	width: 90%;
+	height: 90%;
+	max-width: calc(100% - 40px);
+	max-height: calc(100% - 40px);
+}
