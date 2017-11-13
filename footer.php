@@ -1,7 +1,7 @@
 <!-- Модальные окна -->
 <div class="modals-sec">
 
-	<div id="modal-order-1" class="modal">
+	<div id="modal-order" class="modal">
 		<p>Заказать обратный звонок</p>
 		<p>Оставьте заявку и наш администратор свяжется<br>с&nbsp;Вами в течение 10 минут</p>
 		<form class="ajax-form">
@@ -11,21 +11,10 @@
 			<input type="file" name="user_file" data-label="Файл">
 			<input type="hidden" value="Новая заявка" name="form_subject">
 			<button type="submit" class="btn">Отправить</button>
-			<a href="#" class="btn">Отправить</a>
-		</form>
-		<p>Оставьте заявку и наш администратор свяжется<br>с&nbsp;Вами в течение 10 минут</p>
-	</div>
-
-	<div id="modal-order-2" class="modal">
-		<p>Заказать обратный звонок</p>
-		<p>Оставьте заявку и наш администратор свяжется<br>с&nbsp;Вами в течение 10 минут</p>
-		<form class="ajax-form">
-			<input type="text" name="user_name" placeholder="Введите имя" data-label="Имя пользователя">
-			<input type="email" name="user_email" placeholder="Введите e-mail*" data-label="Email" data-req="true">
-			<input type="tel" name="user_tel" data-label="Телефон" placeholder="Введите телефон*" data-req="true">
-			<input type="hidden" value="Новая заявка" name="form_subject">
-			<button type="submit" class="btn">Отправить</button>
-			<a href="#" class="btn">Отправить</a>
+			<label class="style-checkbox">
+				<input type="checkbox" name="user_policy" data-label="Согласен с условиями" value="yes" data-req="true" checked="">
+				<span>Принимаю <a href="#" target="_blank">условия обработки</a> персональных данных</span>
+			</label>
 		</form>
 	</div>
 
