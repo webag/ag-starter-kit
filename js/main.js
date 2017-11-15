@@ -1,7 +1,7 @@
 /***********************
  отправка формы в php BEGIN
 ***********************/
-$(document).ready(function(){
+$(function($){
 
 	$(".ajax-form").on("submit", function(event) {
 		var form = $(this);
@@ -103,6 +103,7 @@ function init_fancy() {
 		animationDuration : 400
 	});
 }
+
 function init_fancy__video() {
 	$('.fancy-video').fancybox({
 		toolbar: false,
@@ -136,7 +137,8 @@ function init_fancy__video() {
 		}
 	});
 }
-$(document).ready(function(){
+
+$(function(){
 	init_fancy();
 	init_fancy__video();
 });
@@ -148,7 +150,7 @@ $(document).ready(function(){
 /***********************
  Прокрутка к секциям BEGIN
  ***********************/
-$(document).ready(function(){
+$(function($){
 	$('.scrollto').click(function () {
 		var elementClick = $(this).attr("href");
 		var destination = $(elementClick).offset().top;
@@ -164,7 +166,7 @@ $(document).ready(function(){
 /***********************
 Custom scrollbars BEGIN
 ***********************/
-$(document).ready(function(){
+$(function($){
 	$(".scroll").mCustomScrollbar({
 		axis:"y",
 		scrollInertia: 200,
