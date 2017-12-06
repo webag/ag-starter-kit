@@ -86,23 +86,21 @@ Input mask END
  ***********************/
 function init_fancy() {
 	$('.fancy').fancybox({
-		fullScreen: false,
-		slideShow: false,
-		thumbs: false,
-		transitionEffect : "slide",
 		autoFocus : false,
+		buttons : ['close'],
 		backFocus : false,
 		animationEffect: "zoom-in-out",
-		animationDuration : 400
+		animationDuration : 300,
+		transitionEffect : "slide"
 	});
 	$('.fancy-map').fancybox({
 		toolbar: false,
 		smallBtn : true,
-		transitionEffect : "slide",
 		autoFocus : false,
 		backFocus : false,
 		animationEffect: "zoom-in-out",
-		animationDuration : 400
+		animationDuration : 300,
+		transitionEffect : "slide"
 	});
 }
 
@@ -113,6 +111,8 @@ function init_fancy__video() {
 		fullScreen: false,
 		thumbs: false,
 		animationEffect: "zoom-in-out",
+		animationDuration : 300,
+		transitionEffect : "slide",
 		youtube: {
 			controls : 1,
 			showinfo : 0,
@@ -164,18 +164,3 @@ $(function($){
 /***********************
  Прокрутка к секциям END
  ***********************/
-
-
-/***********************
-Custom scrollbars BEGIN
-***********************/
-$(function($){
-	$(".scroll").mCustomScrollbar({
-		axis:"y",
-		scrollInertia: 200,
-		scrollButtons:{ enable: true }
-	});
-});
-/***********************
-Custom scrollbars END
-***********************/

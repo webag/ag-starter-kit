@@ -932,229 +932,6 @@ li.fancybox-thumbs-loading {
   }
 }
 
-/*BASIC STYLE*/
-.mCustomScrollbar {
-  -ms-touch-action: pinch-zoom;
-  touch-action: pinch-zoom;
-  /* direct pointer events to js */
-}
-
-.mCustomScrollbar.mCS_no_scrollbar, .mCustomScrollbar.mCS_touch_action {
-  -ms-touch-action: auto;
-  touch-action: auto;
-}
-
-.mCustomScrollBox {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  max-width: 100%;
-  outline: none;
-  direction: ltr;
-}
-
-.mCSB_container {
-  overflow: hidden;
-  width: auto;
-  height: auto;
-}
-
-.mCSB_scrollTools, .mCSB_draggerContainer {
-  position: absolute;
-  height: auto;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-}
-
-.mCSB_draggerRail {
-  position: relative;
-  z-index: 1;
-}
-
-.mCSB_dragger {
-  cursor: pointer;
-  z-index: 2;
-}
-
-.mCSB_buttonLeft, .mCSB_buttonRight, .mCSB_buttonUp, .mCSB_buttonDown {
-  display: block;
-  position: absolute;
-  cursor: pointer;
-}
-
-.mCS-autoHide .mCSB_scrollTools {
-  opacity: 0;
-}
-
-.mCustomScrollBox:hover .mCSB_scrollTools {
-  opacity: 1;
-}
-
-/*BASIC STYLE*/
-/*y-axis*/
-.mCSB_vertical .mCSB_container {
-  padding-right: 20px;
-}
-
-/*y-axis*/
-/*x-axis*/
-.mCSB_horizontal .mCSB_container {
-  padding-right: 0;
-  padding-bottom: 20px;
-}
-
-/*x-axis*/
-/*yx-axis*/
-.mCSB_container_wrapper {
-  position: absolute;
-  height: auto;
-  width: auto;
-  overflow: hidden;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin-right: 20px;
-  margin-bottom: 20px;
-}
-
-.mCSB_container_wrapper .mCSB_container {
-  padding-right: 20px;
-  padding-bottom: 20px;
-}
-
-.mCSB_vertical_horizontal .mCSB_scrollTools_vertical {
-  bottom: 20px;
-}
-
-.mCSB_vertical_horizontal .mCSB_scrollTools_horizontal {
-  right: 20px;
-}
-
-/*yx-axis*/
-/*VERTICAL SCROLLBAR*/
-.mCSB_scrollTools_vertical {
-  width: 16px;
-  height: auto;
-  left: auto;
-}
-
-.mCSB_scrollTools_vertical a + .mCSB_draggerContainer {
-  margin: 20px 0;
-}
-
-.mCSB_scrollTools_vertical .mCSB_draggerRail {
-  width: 8px;
-  height: 100%;
-  left: 4px;
-}
-
-.mCSB_scrollTools_vertical .mCSB_dragger {
-  width: 100%;
-  height: 30px;
-  /* minimum dragger height */
-}
-
-.mCSB_scrollTools_vertical .mCSB_dragger_bar {
-  position: relative;
-  width: 8px;
-  height: 100%;
-  left: 4px;
-}
-
-.mCSB_scrollTools_vertical .mCSB_buttonUp, .mCSB_scrollTools_vertical .mCSB_buttonDown {
-  height: 16px;
-  width: 100%;
-}
-
-.mCSB_scrollTools_vertical .mCSB_buttonDown {
-  bottom: 0;
-}
-
-/*VERTICAL SCROLLBAR*/
-/*HORIZONTAL SCROLLBAR*/
-.mCSB_scrollTools_horizontal {
-  width: auto;
-  height: 16px;
-  top: auto;
-}
-
-.mCSB_scrollTools_horizontal a + .mCSB_draggerContainer {
-  margin: 0 20px;
-}
-
-.mCSB_scrollTools_horizontal .mCSB_draggerRail {
-  width: 100%;
-  height: 8px;
-  top: 4px;
-}
-
-.mCSB_scrollTools_horizontal .mCSB_dragger {
-  width: 30px;
-  /* minimum dragger width */
-  height: 100%;
-}
-
-.mCSB_scrollTools_horizontal .mCSB_dragger_bar {
-  position: relative;
-  top: 4px;
-  width: 100%;
-  height: 8px;
-}
-
-.mCSB_scrollTools_horizontal .mCSB_buttonLeft, .mCSB_scrollTools_horizontal .mCSB_buttonRight {
-  width: 16px;
-  height: 100%;
-}
-
-.mCSB_scrollTools_horizontal .mCSB_buttonLeft {
-  left: 0;
-}
-
-.mCSB_scrollTools_horizontal .mCSB_buttonRight {
-  right: 0;
-}
-
-/*HORIZONTAL SCROLLBAR*/
-/*TRANSITIONS*/
-.mCSB_scrollTools, .mCSB_dragger_bar, .mCSB_buttonUp, .mCSB_buttonDown, .mCSB_buttonLeft, .mCSB_buttonRight {
-  -webkit-transition: opacity .15s ease, background-color .15s ease;
-  -o-transition: opacity .15s ease, background-color .15s ease;
-  transition: opacity .15s ease, background-color .15s ease;
-}
-
-/*TRANSITIONS*/
-/*THEME*/
-.mCSB_draggerRail {
-  border-radius: 16px;
-  background-color: #eee;
-}
-
-.mCSB_dragger_bar {
-  border-radius: 16px;
-  background-color: #BBB;
-}
-
-.mCSB_dragger:hover .mCSB_dragger_bar {
-  background-color: #777;
-}
-
-.mCSB_dragger:active .mCSB_dragger_bar, .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar {
-  background-color: #777;
-}
-
-.mCSB_buttonUp, .mCSB_buttonDown, .mCSB_buttonLeft, .mCSB_buttonRight {
-  background: #BBB;
-  border-radius: 50%;
-}
-
-.mCSB_buttonUp:hover, .mCSB_buttonUp:active, .mCSB_buttonDown:hover, .mCSB_buttonDown:active, .mCSB_buttonLeft:hover, .mCSB_buttonLeft:active, .mCSB_buttonRight:hover, .mCSB_buttonRight:active {
-  background: #777;
-}
-
-/*THEME*/
 *, *:after, *:before {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -2056,11 +1833,6 @@ button::-moz-focus-inner {
   display: none;
   width: 500px;
   max-width: 100%;
-  -webkit-transition: opacity 0.4s ease,-webkit-transform 0.4s ease;
-  transition: opacity 0.4s ease,-webkit-transform 0.4s ease;
-  -o-transition: transform 0.4s ease,opacity 0.4s ease;
-  transition: transform 0.4s ease,opacity 0.4s ease;
-  transition: transform 0.4s ease,opacity 0.4s ease,-webkit-transform 0.4s ease;
   will-change: transform,opacity;
   overflow: visible !important;
 }
@@ -2135,7 +1907,7 @@ button::-moz-focus-inner {
   background: #8c8e9a;
 }
 
-.fancybox-slide--iframe .fancybox-close-small {
+.fancybox-container .fancybox-close-small {
   position: absolute;
   top: -18px;
   right: -18px;
@@ -2151,17 +1923,17 @@ button::-moz-focus-inner {
 }
 
 @media (max-width: 680px) {
-  .fancybox-slide--iframe .fancybox-close-small {
+  .fancybox-container .fancybox-close-small {
     top: 5px;
     right: 5px;
   }
 }
 
-.fancybox-slide--iframe .fancybox-close-small:hover {
+.fancybox-container .fancybox-close-small:hover {
   background-color: #fffb42;
 }
 
-.fancybox-slide--iframe .fancybox-close-small:before, .fancybox-slide--iframe .fancybox-close-small:after {
+.fancybox-container .fancybox-close-small:before, .fancybox-container .fancybox-close-small:after {
   content: '';
   position: absolute;
   top: 50%;
@@ -2177,27 +1949,27 @@ button::-moz-focus-inner {
   border-radius: 0;
 }
 
-.fancybox-slide--iframe .fancybox-close-small:hover:before, .fancybox-slide--iframe .fancybox-close-small:hover:after {
+.fancybox-container .fancybox-close-small:hover:before, .fancybox-container .fancybox-close-small:hover:after {
   background-color: #000;
 }
 
-.fancybox-slide--iframe .fancybox-close-small:before {
+.fancybox-container .fancybox-close-small:before {
   -webkit-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
 
-.fancybox-slide--iframe .fancybox-close-small:after {
+.fancybox-container .fancybox-close-small:after {
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
-.fancybox-slide--iframe .fancybox-close-small:focus {
+.fancybox-container .fancybox-close-small:focus {
   outline: none;
 }
 
-.fancybox-slide--iframe .fancybox-close-small:focus:before, .fancybox-slide--iframe .fancybox-close-small:focus:after {
+.fancybox-container .fancybox-close-small:focus:before, .fancybox-container .fancybox-close-small:focus:after {
   outline: none;
 }
 
