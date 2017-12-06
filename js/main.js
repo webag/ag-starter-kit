@@ -92,6 +92,7 @@ function init_fancy() {
 		transitionEffect : "slide",
 		autoFocus : false,
 		backFocus : false,
+		animationEffect: "zoom-in-out",
 		animationDuration : 400
 	});
 	$('.fancy-map').fancybox({
@@ -100,6 +101,7 @@ function init_fancy() {
 		transitionEffect : "slide",
 		autoFocus : false,
 		backFocus : false,
+		animationEffect: "zoom-in-out",
 		animationDuration : 400
 	});
 }
@@ -110,6 +112,7 @@ function init_fancy__video() {
 		smallBtn : true,
 		fullScreen: false,
 		thumbs: false,
+		animationEffect: "zoom-in-out",
 		youtube: {
 			controls : 1,
 			showinfo : 0,
