@@ -4,10 +4,6 @@
 	max-width: 100%;
 	will-change: transform,opacity;
 	overflow: visible !important;
-
-	.fancybox-close-small{
-		@include cross();
-	}
 }
 
 .fancybox-slide--current {
@@ -26,16 +22,17 @@
 	background: #8c8e9a;
 }
 
-.fancybox-container .fancybox-close-small{
+.fancybox-close-corner{
 	@include cross();
 }
 
 .fancybox-slide--iframe .fancybox-content{
 	width: 90%;
 	height: 90%;
-	max-width: calc(100% - 20px);
+	max-width: calc(100% - 40px);
 	max-height: calc(100% - 40px);
 	@include res(s){
 		width: 100%;
+		max-width: calc(100% - 10px);
 	}
 }
