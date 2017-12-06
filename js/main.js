@@ -112,8 +112,7 @@ function init_fancy__video() {
 	$('.fancy-video').fancybox({
 		toolbar: false,
 		smallBtn : true,
-		fullScreen: false,
-		thumbs: false,
+		backFocus : false,
 		animationEffect: "zoom-in-out",
 		animationDuration : 300,
 		transitionEffect : "slide",
