@@ -2204,8 +2204,14 @@ button::-moz-focus-inner {
 .fancybox-slide--iframe .fancybox-content {
   width: 90%;
   height: 90%;
-  max-width: calc(100% - 40px);
+  max-width: calc(100% - 20px);
   max-height: calc(100% - 40px);
+}
+
+@media (max-width: 680px) {
+  .fancybox-slide--iframe .fancybox-content {
+    width: 100%;
+  }
 }
 
 section {
