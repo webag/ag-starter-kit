@@ -86,7 +86,6 @@ Input mask END
  ***********************/
 function init_fancy() {
 	$('.fancy').fancybox({
-		autoFocus : false,
 		buttons : ['close'],
 		backFocus : false,
 		animationEffect: "zoom-in-out",
@@ -96,7 +95,6 @@ function init_fancy() {
 	$('.fancy-map').fancybox({
 		toolbar: false,
 		smallBtn : true,
-		autoFocus : false,
 		backFocus : false,
 		animationEffect: "zoom-in-out",
 		animationDuration : 300,
