@@ -1985,12 +1985,3 @@ button::-moz-focus-inner {
     width: 100%;
   }
 }
-
-section {
-  height: 3000px;
-}
-
-.scroll {
-  margin-top: 50px;
-  height: 300px;
-}
