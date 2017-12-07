@@ -29,20 +29,6 @@
 		<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="fancy-video btn">Открыть youtube</a>
 		<a href="https://yandex.ru/map-widget/v1/-/CBQneLhsOA" class="fancy-map btn" data-type="iframe">схема проезда</a>
 
-
-		<div class="row">
-			<div class="grid-3">3333</div>
-			<div class="grid-5">5555</div>
-			<div class="grid-4">4444</div>
-			<div class="grid-4 grid-off-3">4444</div>
-		</div>
-		<div class="row-ng">
-			<div class="grid-3">3333</div>
-			<div class="grid-5">5555</div>
-			<div class="grid-4">4444</div>
-			<div class="grid-4 grid-off-3">4444</div>
-		</div>
-
 	</div>
 </section>
 
