@@ -7,5 +7,6 @@
     <orderEntry type="library" name="jquery" level="application" />
     <orderEntry type="library" name="Jquery" level="application" />
     <orderEntry type="library" name="jquery-DefinitelyTyped" level="application" />
+    <orderEntry type="library" name="jQuery" level="application" />
   </component>
 </module>
