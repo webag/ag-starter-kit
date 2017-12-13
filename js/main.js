@@ -2,7 +2,6 @@
  отправка формы в php BEGIN
 ***********************/
 $(function($){
-
 	$(".ajax-form").on("submit", function(event) {
 		var form = $(this);
 		var send = true;
@@ -36,7 +35,7 @@ $(function($){
 		$("[data-label]").each(function () {
 			var input_name = $(this).attr('name');
 			var input_label__name = input_name + '_label';
-			var input_label__value = $(this).data('label');
+			var input_label__value = $(this).data('label').toString();
 			form_data.append(input_label__name,input_label__value)
 		});
 
