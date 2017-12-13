@@ -86,24 +86,24 @@ Input mask END
  ***********************/
 function init_fancy() {
 	$('.fancy').fancybox({
-		buttons : ['close'],
-		backFocus : false,
+		buttons: ['close'],
+		backFocus: false,
 		animationEffect: "zoom-in-out",
-		animationDuration : 300,
-		transitionEffect : "slide",
-		btnTpl : {
-			smallBtn   : '<button data-fancybox-close class="fancybox-close-corner" title="Закрыть"></button>'
+		animationDuration: 300,
+		transitionEffect: "slide",
+		btnTpl: {
+			smallBtn: '<button data-fancybox-close class="fancybox-close-corner" title="Закрыть"></button>'
 		}
 	});
 	$('.fancy-map').fancybox({
 		toolbar: false,
-		smallBtn : true,
-		backFocus : false,
+		smallBtn: true,
+		backFocus: false,
 		animationEffect: "zoom-in-out",
-		animationDuration : 300,
-		transitionEffect : "slide",
-		btnTpl : {
-			smallBtn   : '<button data-fancybox-close class="fancybox-close-corner" title="Закрыть"></button>'
+		animationDuration: 300,
+		transitionEffect: "slide",
+		btnTpl: {
+			smallBtn: '<button data-fancybox-close class="fancybox-close-corner" title="Закрыть"></button>'
 		}
 	});
 }
@@ -111,20 +111,20 @@ function init_fancy() {
 function init_fancy__video() {
 	$('.fancy-video').fancybox({
 		toolbar: false,
-		smallBtn : true,
-		backFocus : false,
+		smallBtn: true,
+		backFocus: false,
 		animationEffect: "zoom-in-out",
-		animationDuration : 300,
-		transitionEffect : "slide",
-		btnTpl : {
-			smallBtn   : '<button data-fancybox-close class="fancybox-close-corner" title="Закрыть"></button>'
+		animationDuration: 300,
+		transitionEffect: "slide",
+		btnTpl: {
+			smallBtn: '<button data-fancybox-close class="fancybox-close-corner" title="Закрыть"></button>'
 		},
 		youtube: {
-			controls : 1,
-			showinfo : 0,
+			controls: 1,
+			showinfo: 0,
 			autoplay: 1
 		},
-		onUpdate : function( instance, current ) {
+		onUpdate: function( instance, current ) {
 			var width,
 				height,
 				ratio = 16 / 9,
@@ -160,7 +160,7 @@ $(function(){
  Прокрутка к секциям BEGIN
  ***********************/
 $(function($){
-	$('.scrollto').click(function () {
+	$('.scrollto').on('click',function () {
 		var elementClick = $(this).attr("href");
 		var destination = $(elementClick).offset().top;
 		$('html,body').stop().animate({scrollTop:destination}, 1000);
