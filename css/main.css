@@ -1781,7 +1781,7 @@ button::-moz-focus-inner {
   background: #8c8e9a;
 }
 
-.fancybox-close-corner {
+.fancybox-close-small {
   position: absolute;
   top: -18px;
   right: -18px;
@@ -1795,17 +1795,17 @@ button::-moz-focus-inner {
 }
 
 @media (max-width: 680px) {
-  .fancybox-close-corner {
+  .fancybox-close-small {
     top: 5px;
     right: 5px;
   }
 }
 
-.fancybox-close-corner:hover {
+.fancybox-close-small:hover {
   background-color: #fffb42;
 }
 
-.fancybox-close-corner:before, .fancybox-close-corner:after {
+.fancybox-close-small:before, .fancybox-close-small:after {
   content: '';
   position: absolute;
   top: 50%;
@@ -1819,25 +1819,25 @@ button::-moz-focus-inner {
   border-radius: 0;
 }
 
-.fancybox-close-corner:hover:before, .fancybox-close-corner:hover:after {
+.fancybox-close-small:hover:before, .fancybox-close-small:hover:after {
   background-color: #000;
 }
 
-.fancybox-close-corner:before {
+.fancybox-close-small:before {
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
 
-.fancybox-close-corner:after {
+.fancybox-close-small:after {
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
-.fancybox-close-corner:focus {
+.fancybox-close-small:focus {
   outline: none;
 }
 
-.fancybox-close-corner:focus:before, .fancybox-close-corner:focus:after {
+.fancybox-close-small:focus:before, .fancybox-close-small:focus:after {
   outline: none;
 }
 

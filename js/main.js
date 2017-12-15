@@ -89,10 +89,7 @@ function init_fancy() {
 		backFocus: false,
 		animationEffect: "zoom-in-out",
 		animationDuration: 300,
-		transitionEffect: "slide",
-		btnTpl: {
-			smallBtn: '<button data-fancybox-close class="fancybox-close-corner" title="Закрыть"></button>'
-		}
+		transitionEffect: "slide"
 	});
 	$('.fancy-map').fancybox({
 		toolbar: false,
@@ -100,10 +97,7 @@ function init_fancy() {
 		backFocus: false,
 		animationEffect: "zoom-in-out",
 		animationDuration: 300,
-		transitionEffect: "slide",
-		btnTpl: {
-			smallBtn: '<button data-fancybox-close class="fancybox-close-corner" title="Закрыть"></button>'
-		}
+		transitionEffect: "slide"
 	});
 }
 
@@ -115,9 +109,6 @@ function init_fancy__video() {
 		animationEffect: "zoom-in-out",
 		animationDuration: 300,
 		transitionEffect: "slide",
-		btnTpl: {
-			smallBtn: '<button data-fancybox-close class="fancybox-close-corner" title="Закрыть"></button>'
-		},
 		youtube: {
 			controls: 1,
 			showinfo: 0,
