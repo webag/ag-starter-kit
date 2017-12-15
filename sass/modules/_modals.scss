@@ -22,7 +22,7 @@
 	background: #8c8e9a;
 }
 
-.fancybox-close-small{
+.fancybox-close-small,.fancybox-slide--image .fancybox-close-small, .fancybox-slide--iframe .fancybox-close-small{
 	@include cross();
 }
 
