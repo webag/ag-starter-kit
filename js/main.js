@@ -1,24 +1,24 @@
 /***********************
  отправка формы в php BEGIN
-***********************/
-$(function(){
-	$(".ajax-form").on("submit", function(event) {
+ ***********************/
+$(function () {
+	$(".ajax-form").on("submit", function (event) {
 		var form = $(this);
 		var send = true;
 		event.preventDefault();
 
-		$(this).find("[data-req='true']").each(function(){
+		$(this).find("[data-req='true']").each(function () {
 			if ($(this).val() === "") {
 				$(this).addClass('error');
 				send = false;
 			}
-			if ($(this).is('select')){
+			if ($(this).is('select')) {
 				if ($(this).val() === null) {
 					$(this).addClass('error');
 					send = false;
 				}
 			}
-			if ($(this).is('input[type="checkbox"]')){
+			if ($(this).is('input[type="checkbox"]')) {
 				if ($(this).prop('checked') !== true) {
 					$(this).addClass('error');
 					send = false;
@@ -26,7 +26,7 @@ $(function(){
 			}
 		});
 
-		$(this).find("[data-req='true']").on('focus', function(){
+		$(this).find("[data-req='true']").on('focus', function () {
 			$(this).removeClass('error');
 		});
 
@@ -36,7 +36,7 @@ $(function(){
 			var input_name = $(this).attr('name');
 			var input_label__name = input_name + '_label';
 			var input_label__value = $(this).data('label').toString();
-			form_data.append(input_label__name,input_label__value)
+			form_data.append(input_label__name, input_label__value)
 		});
 
 		if (send === true) {
@@ -48,15 +48,17 @@ $(function(){
 				contentType: false,
 				processData: false,
 				data: form_data,
-				success: (function(result) {
+				success: (function (result) {
 					var response = JSON.parse(result);
 					console.log(response);
 					$.fancybox.close();
-					if (response["MAILER_ERROR"] !== undefined){
-						$.fancybox.open({src  : '#modal-error'});
+					if (response["MAILER_ERROR"] !== undefined) {
+						$.fancybox.open({src: '#modal-error'});
 					} else {
-						$.fancybox.open({src  : '#modal-thanks'});
-						setTimeout(function() {$.fancybox.close();},4500);
+						$.fancybox.open({src: '#modal-thanks'});
+						setTimeout(function () {
+							$.fancybox.close();
+						}, 4500);
 						form[0].reset();
 					}
 				})
@@ -66,18 +68,19 @@ $(function(){
 });
 /***********************
  отправка формы в php END
-***********************/
+ ***********************/
 
 
 /***********************
-Input mask BEGIN
-***********************/
-$(function(){
+ Input mask BEGIN
+ ***********************/
+$(function () {
 	$("input[type='tel']").mask("+7 (999) 999-99-99");
 });
+
 /***********************
-Input mask END
-***********************/
+ Input mask END
+ ***********************/
 
 
 /***********************
@@ -114,30 +117,30 @@ function init_fancy__video() {
 			showinfo: 0,
 			autoplay: 1
 		},
-		onUpdate: function( instance, current ) {
+		onUpdate: function (instance, current) {
 			var width,
 				height,
 				ratio = 16 / 9,
 				video = current.$content;
-			if ( video ) {
+			if (video) {
 				video.hide();
-				width  = current.$slide.width() - 30;
+				width = current.$slide.width() - 30;
 				height = current.$slide.height() - 100;
-				if ( height * ratio > width ) {
+				if (height * ratio > width) {
 					height = width / ratio;
 				} else {
 					width = height * ratio;
 				}
 				video.css({
-					width  : width,
-					height : height
+					width: width,
+					height: height
 				}).show();
 			}
 		}
 	});
 }
 
-$(function(){
+$(function () {
 	init_fancy();
 	init_fancy__video();
 });
@@ -149,11 +152,11 @@ $(function(){
 /***********************
  Прокрутка к секциям BEGIN
  ***********************/
-$(function(){
-	$('.scrollto').on('click',function () {
+$(function () {
+	$('.scrollto').on('click', function () {
 		var elementClick = $(this).attr("href");
 		var destination = $(elementClick).offset().top;
-		$('html,body').stop().animate({scrollTop:destination}, 1000);
+		$('html,body').stop().animate({scrollTop: destination}, 1000);
 		return false;
 	});
 });
@@ -163,9 +166,9 @@ $(function(){
 
 
 /***********************
-Waypoints BEGIN
-***********************/
-$(function(){
+ Waypoints BEGIN
+ ***********************/
+$(function () {
 	$('.anim').waypoint(function () {
 		$(this.element).toggleClass('animated');
 	}, {
@@ -173,5 +176,5 @@ $(function(){
 	});
 });
 /***********************
-Waypoints END
-***********************/
+ Waypoints END
+ ***********************/
