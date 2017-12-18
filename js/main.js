@@ -1,7 +1,7 @@
 /***********************
  отправка формы в php BEGIN
 ***********************/
-$(function($){
+$(function(){
 	$(".ajax-form").on("submit", function(event) {
 		var form = $(this);
 		var send = true;
@@ -72,7 +72,7 @@ $(function($){
 /***********************
 Input mask BEGIN
 ***********************/
-$(function($){
+$(function(){
 	$("input[type='tel']").mask("+7 (999) 999-99-99");
 });
 /***********************
@@ -149,7 +149,7 @@ $(function(){
 /***********************
  Прокрутка к секциям BEGIN
  ***********************/
-$(function($){
+$(function(){
 	$('.scrollto').on('click',function () {
 		var elementClick = $(this).attr("href");
 		var destination = $(elementClick).offset().top;
@@ -165,7 +165,7 @@ $(function($){
 /***********************
 Waypoints BEGIN
 ***********************/
-$(function($){
+$(function(){
 	$('.anim').waypoint(function () {
 		$(this.element).toggleClass('animated');
 	}, {
