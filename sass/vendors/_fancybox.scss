@@ -414,8 +414,8 @@ body.fancybox-iosfix {
 	position: absolute;
 	top: 0;
 	right: 0;
-	width: 40px;
-	height: 40px;
+	width: 44px;
+	height: 44px;
 	padding: 0;
 	margin: 0;
 	border: 0;
@@ -432,7 +432,7 @@ body.fancybox-iosfix {
 	right: 5px;
 	width: 30px;
 	height: 30px;
-	font: 22px/30px Arial, "Helvetica Neue", Helvetica, sans-serif;
+	font: 20px/30px Arial, "Helvetica Neue", Helvetica, sans-serif;
 	color: #888;
 	font-weight: 300;
 	text-align: center;
@@ -460,7 +460,7 @@ body.fancybox-iosfix {
 .fancybox-slide--image .fancybox-close-small,
 .fancybox-slide--iframe .fancybox-close-small {
 	top: 0;
-	right: -40px;
+	right: -44px;
 }
 
 .fancybox-slide--image .fancybox-close-small:after,
@@ -669,98 +669,72 @@ body.fancybox-iosfix {
 	border-radius: 3px;
 	background: #f4f4f4;
 	max-width: 90%;
-	text-align: center;
 }
 
 .fancybox-share h1 {
 	color: #222;
 	margin: 0 0 20px 0;
-	font-size: 35px;
+	font-size: 33px;
 	font-weight: 700;
+	text-align: center;
 }
 
 .fancybox-share p {
 	margin: 0;
 	padding: 0;
+	text-align: center;
 }
 
-p.fancybox-share__links {
+.fancybox-share p:first-of-type {
 	margin-right: -10px;
 }
 
-.fancybox-share__button {
+.fancybox-share_button {
 	display: inline-block;
 	text-decoration: none;
 	margin: 0 10px 10px 0;
-	padding: 0 15px;
-	min-width: 130px;
+	padding: 10px 20px;
 	border: 0;
 	border-radius: 3px;
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16);
 	background: #fff;
 	white-space: nowrap;
-	font-size: 14px;
-	font-weight: 700;
-	line-height: 40px;
+	font-size: 16px;
+	line-height: 23px;
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
-	color: #fff;
+	min-width: 140px;
+	color: #707070;
 	transition: all .2s;
 }
 
-.fancybox-share__button:hover {
+.fancybox-share_button:focus,
+.fancybox-share_button:hover {
 	text-decoration: none;
+	color: #333;
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.3);
 }
 
-.fancybox-share__button--fb {
-	background: #3b5998;
+.fancybox-share_button svg {
+	margin-right: 5px;
+	width: 20px;
+	height: 20px;
+	vertical-align: text-bottom;
 }
 
-.fancybox-share__button--fb:hover {
-	background: #344e86;
-}
-
-.fancybox-share__button--pt {
-	background: #bd081d;
-}
-
-.fancybox-share__button--pt:hover {
-	background: #aa0719;
-}
-
-.fancybox-share__button--tw {
-	background: #1da1f2;
-}
-
-.fancybox-share__button--tw:hover {
-	background: #0d95e8;
-}
-
-.fancybox-share__button svg {
-	position: relative;
-	top: -1px;
-	width: 25px;
-	height: 25px;
-	margin-right: 7px;
-	vertical-align: middle;
-}
-
-.fancybox-share__button svg path {
-	fill: #fff;
-}
-
-.fancybox-share__input {
+.fancybox-share input {
 	box-sizing: border-box;
 	width: 100%;
-	margin: 10px 0 0 0;
+	margin: 5px 0 0 0;
 	padding: 10px 15px;
-	background: transparent;
+	border: 1px solid #d7d7d7;
+	border-radius: 3px;
+	background: #ebebeb;
 	color: #5d5b5b;
 	font-size: 14px;
 	outline: none;
-	border: 0;
-	border-bottom: 2px solid #d7d7d7;
 }
 
 /* Thumbs */
