@@ -89,18 +89,16 @@ $(function () {
 function init_fancy() {
 	$('.fancy').fancybox({
 		buttons: ['close'],
+		backFocus: false
+	});
+	$('.fancy-modal').fancybox({
 		backFocus: false,
-		animationEffect: "zoom-in-out",
-		animationDuration: 300,
-		transitionEffect: "slide"
+		touch: false
 	});
 	$('.fancy-map').fancybox({
 		toolbar: false,
 		smallBtn: true,
-		backFocus: false,
-		animationEffect: "zoom-in-out",
-		animationDuration: 300,
-		transitionEffect: "slide"
+		backFocus: false
 	});
 }
 

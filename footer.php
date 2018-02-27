@@ -3,7 +3,7 @@
 
 	<div id="modal-order" class="modal">
 		<p>Заказать обратный звонок</p>
-		<p>Оставьте заявку и наш администратор свяжется<br>с&nbsp;Вами в течение 10 минут</p>
+		<p>Оставьте заявку и наш администратор свяжется с&nbsp;Вами в течение 10 минут</p>
 		<form class="ajax-form">
 			<input type="text" name="user_name" placeholder="Введите имя" data-label="Имя пользователя" class="text-input" >
 			<input type="email" name="user_email" placeholder="Введите e-mail*" data-label="Email" class="text-input" data-req="true">

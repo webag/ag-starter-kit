@@ -1828,7 +1828,3 @@ button::-moz-focus-inner {
     max-width: calc(100% - 10px);
   }
 }
-
-.scroll {
-  height: 1000px;
-}
