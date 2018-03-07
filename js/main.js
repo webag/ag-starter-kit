@@ -87,11 +87,13 @@ $(function () {
  fancybox BEGIN
  ***********************/
 function init_fancy() {
-	$('.fancy').fancybox({
+	$().fancybox({
+		selector: '.fancy',
 		buttons: ['close'],
 		backFocus: false
 	});
-	$('.fancy-modal').fancybox({
+	$().fancybox({
+		selector: '.fancy-modal',
 		backFocus: false,
 		touch: false
 	});
