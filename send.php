@@ -1,6 +1,7 @@
 <?php
 $subject = $_POST["form_subject"];
 $message = "";
+$tofile = $subject . ";";
 
 foreach ($_POST as $input_name => $input_val) {
 	$input_val = htmlspecialchars(strip_tags(trim($input_val)));
@@ -12,9 +13,19 @@ foreach ($_POST as $input_name => $input_val) {
 			} else {
 				$message .= $input_name . ": " . $input_val . "<br>";
 			}
+			$tofile .= $input_val . ";";
 		}
 	}
 }
+
+//запись в файл
+$today = date("j.m.Y, G:i");
+$tofile .= $today."\n";
+
+$file = 'orders.csv';
+$bom = "\xEF\xBB\xBF";
+@file_put_contents($file, $bom . $tofile . file_get_contents($file));
+//запись в файл конец
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
