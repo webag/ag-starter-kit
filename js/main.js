@@ -97,7 +97,8 @@ function init_fancy() {
 		backFocus: false,
 		touch: false
 	});
-	$('.fancy-map').fancybox({
+	$().fancybox({
+		selector: '.fancy-map',
 		toolbar: false,
 		smallBtn: true,
 		backFocus: false
@@ -105,37 +106,15 @@ function init_fancy() {
 }
 
 function init_fancy__video() {
-	$('.fancy-video').fancybox({
+	$().fancybox({
+		selector: '.fancy-video',
 		toolbar: false,
 		smallBtn: true,
 		backFocus: false,
-		animationEffect: "zoom-in-out",
-		animationDuration: 300,
-		transitionEffect: "slide",
 		youtube: {
 			controls: 1,
 			showinfo: 0,
 			autoplay: 1
-		},
-		onUpdate: function (instance, current) {
-			var width,
-				height,
-				ratio = 16 / 9,
-				video = current.$content;
-			if (video) {
-				video.hide();
-				width = current.$slide.width() - 30;
-				height = current.$slide.height() - 100;
-				if (height * ratio > width) {
-					height = width / ratio;
-				} else {
-					width = height * ratio;
-				}
-				video.css({
-					width: width,
-					height: height
-				}).show();
-			}
 		}
 	});
 }
