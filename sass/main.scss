@@ -1,6 +1,6 @@
-@import 'helpers/variables';
-@import 'helpers/mixins';
-@import 'helpers/placeholders';
+@import 'base/variables';
+@import 'base/mixins';
+@import 'base/placeholders';
 
 @import 'vendors/fancybox';
 
@@ -9,9 +9,8 @@
 @import 'base/icons';
 @import 'base/typography';
 @import 'base/grid';
-
-@import 'modules/forms';
-@import 'modules/buttons';
-@import 'modules/modals';
+@import 'base/forms';
+@import 'base/buttons';
+@import 'base/modals';
 
 @import 'pages/home';

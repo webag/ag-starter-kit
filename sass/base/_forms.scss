@@ -10,7 +10,7 @@ label{cursor: pointer;}
 	padding: 5px 10px;
 	overflow: visible;
 
-	@include placeholder {
+	&::placeholder {
 		font-size: 14px;
 		color: #A8A8A8;
 		opacity: 1;
@@ -19,7 +19,7 @@ label{cursor: pointer;}
 
 	&:focus{
 		outline: none;
-		@include placeholder {
+		&::placeholder {
 			opacity: 0;
 		}
 	}

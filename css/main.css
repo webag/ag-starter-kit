@@ -1653,21 +1653,14 @@ label {
   transition: all 0.3s ease;
 }
 
-.text-input::-moz-placeholder {
-  font-size: 14px;
-  color: #A8A8A8;
-  opacity: 1;
-  transition: all 0.3s ease;
-}
-
-.text-input:-moz-placeholder {
-  font-size: 14px;
-  color: #A8A8A8;
-  opacity: 1;
-  transition: all 0.3s ease;
-}
-
 .text-input:-ms-input-placeholder {
+  font-size: 14px;
+  color: #A8A8A8;
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+.text-input::placeholder {
   font-size: 14px;
   color: #A8A8A8;
   opacity: 1;
@@ -1682,15 +1675,11 @@ label {
   opacity: 0;
 }
 
-.text-input:focus::-moz-placeholder {
-  opacity: 0;
-}
-
-.text-input:focus:-moz-placeholder {
-  opacity: 0;
-}
-
 .text-input:focus:-ms-input-placeholder {
+  opacity: 0;
+}
+
+.text-input:focus::placeholder {
   opacity: 0;
 }
 
