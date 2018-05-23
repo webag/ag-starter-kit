@@ -49,10 +49,9 @@ $(function () {
 				processData: false,
 				data: form_data,
 				success: (function (result) {
-					var response = JSON.parse(result);
-					console.log(response);
+					console.log(result);
 					$.fancybox.close();
-					if (response["MAILER_ERROR"] !== undefined) {
+					if (result.indexOf("Mail FAIL") !== -1) {
 						$.fancybox.open({src: '#modal-error'});
 					} else {
 						$.fancybox.open({src: '#modal-thanks'});

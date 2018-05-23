@@ -63,20 +63,9 @@ try {
 	}
 	//Обрабатываем файлы
 
-	//возвращаем массив с результатом
-	$result = array();
-	$result['MAIL_SUBJECT'] = $mail->Subject;
-	$result['MAIL_BODY'] = $mail->Body;
-	$result['MAIL_FROM'] = $mail->From;
-	$result['MAIL_FROM_NAME'] = $mail->FromName;
-
 	$mail->send();
-	$result['MAILER_CHECK'] = 'Mail OK';
+	echo "Mail OK";
 } catch (Exception $e) {
-	$result['MAILER_ERROR'] = $e->errorMessage();
+	echo "Mail FAIL: ".$e;
 }
-
-$result = json_encode($result);
-echo $result;
-
 ?>
