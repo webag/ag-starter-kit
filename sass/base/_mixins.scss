@@ -24,16 +24,16 @@ $cross-bg-color--hover: #fffb42;
 	height: $full_cross_size;
 	border-radius: 50%;
 	border: none;
-	@include res(s){
+	@include res(s) {
 		top: 5px;
 		right: 5px;
 	}
 
-	&:hover{
+	&:hover {
 		background-color: $cross-bg-color--hover;
 	}
 
-	&:before,&:after{
+	&:before, &:after {
 		content: '';
 		position: absolute;
 		top: 50%;
@@ -47,26 +47,26 @@ $cross-bg-color--hover: #fffb42;
 		border-radius: 0;
 	}
 
-	&:hover:before,&:hover:after{
+	&:hover:before, &:hover:after {
 		background-color: $cross-color--hover;
 	}
 
-	&:before{
+	&:before {
 		transform: rotate(-45deg);
 	}
 
-	&:after{
+	&:after {
 		transform: rotate(45deg);
 	}
 
-	&:focus{
+	&:focus {
 		outline: none;
-		&:before,&:after{
+		&:before, &:after {
 			outline: none;
 		}
 	}
 
-	svg{
+	svg {
 		display: none;
 	}
 }

@@ -6,15 +6,9 @@
 	<meta name="format-detection" content="telephone=no">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<!--[if lt IE 9]>
-		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-	<![endif]-->
-
-
 	<title>Шаблон проекта</title>
 
-	<!-- favocons -->
+	<!-- favicons -->
 	<link rel="apple-touch-icon" sizes="120x120" href="favicons/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
@@ -23,7 +17,7 @@
 	<link rel="shortcut icon" href="favicons/favicon.ico">
 	<meta name="msapplication-config" content="favicons/browserconfig.xml">
 	<meta name="theme-color" content="#ffffff">
-	<!-- favocons -->
+	<!-- favicons -->
 
 	<!-- og -->
 	<meta property="og:title" content="Шаблон проекта">

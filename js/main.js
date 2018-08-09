@@ -30,7 +30,16 @@ $(function () {
 			$(this).removeClass('error');
 		});
 
+		// empty file inputs fix for mac
+		var fileInputs = $('input[type="file"]:not([disabled])', form);
+		fileInputs.each(function (_, input) {
+			if (input.files.length > 0) return;
+			$(input).prop('disabled', true)
+		});
+
 		var form_data = new FormData(this);
+
+		fileInputs.prop('disabled', false);
 
 		$("[data-label]").each(function () {
 			var input_name = $(this).attr('name');
@@ -76,7 +85,6 @@ $(function () {
 $(function () {
 	$("input[type='tel']").mask("+7 (999) 999-99-99");
 });
-
 /***********************
  Input mask END
  ***********************/
@@ -85,22 +93,36 @@ $(function () {
 /***********************
  fancybox BEGIN
  ***********************/
+$.fancybox.defaults.backFocus = false;
+$.fancybox.defaults.lang = 'ru';
+$.fancybox.defaults.i18n =
+	{
+		'ru': {
+			CLOSE: 'Закрыть',
+			NEXT: 'Дальше',
+			PREV: 'Назад',
+			ERROR: 'Не удается загрузить. <br/> Попробуйте позднее.',
+			PLAY_START: 'Начать слайдшоу',
+			PLAY_STOP: 'Остановить слайдшоу',
+			FULL_SCREEN: 'На весь экран',
+			THUMBS: 'Превью'
+		}
+	};
+
 function init_fancy() {
 	$().fancybox({
 		selector: '.fancy',
-		buttons: ['close'],
-		backFocus: false
+		buttons: ['close']
 	});
 	$().fancybox({
 		selector: '.fancy-modal',
-		backFocus: false,
 		touch: false
 	});
 	$().fancybox({
 		selector: '.fancy-map',
 		toolbar: false,
 		smallBtn: true,
-		backFocus: false
+		defaultType: "iframe"
 	});
 }
 
@@ -109,7 +131,6 @@ function init_fancy__video() {
 		selector: '.fancy-video',
 		toolbar: false,
 		smallBtn: true,
-		backFocus: false,
 		youtube: {
 			controls: 1,
 			showinfo: 0,

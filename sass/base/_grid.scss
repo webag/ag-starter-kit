@@ -3,7 +3,7 @@
 	max-width: 100%;
 }
 
-.hidden{
+.hidden {
 	display: none !important;
 }
 
@@ -17,9 +17,9 @@
 	}
 }
 
-@each $breakpoint,$value in $breakpoints {
-	@include res($breakpoint){
-		@for $i from 1 through 12 {
+@each $breakpoint, $value in $breakpoints {
+	@include res($breakpoint) {
+		@for $i from 0 through 12 {
 			.grid-#{$i}_#{$breakpoint} {
 				width: 100% / 12 * $i;
 			}
@@ -30,7 +30,7 @@
 	}
 }
 
-.container{
+.container {
 	margin: 0 auto;
 	width: 100%;
 	max-width: $container_width;
@@ -39,13 +39,13 @@
 	padding-right: 16px;
 }
 
-.row{
+.row {
 	display: flex;
 	flex-wrap: wrap;
 	margin-left: -$gutter;
 	margin-right: -$gutter;
 
-	[class^="grid"]{
+	[class^="grid"] {
 		padding-left: $gutter;
 		padding-right: $gutter;
 	}
@@ -58,24 +58,24 @@
 	}
 }
 
-.row-ng{
+.row-ng {
 	display: flex;
 	flex-wrap: wrap;
 }
 
-.clearfix{
-	&:before{
+.clearfix {
+	&:before {
 		content: " ";
 		display: table;
 	}
-	&:after{
+	&:after {
 		content: " ";
 		display: table;
 		clear: both;
 	}
 }
 
-.img-responsive{
+.img-responsive {
 	width: 100%;
 	height: auto;
 }
