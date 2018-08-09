@@ -1717,6 +1717,10 @@ label {
   opacity: 0;
 }
 
+.text-input.error {
+  border-color: red;
+}
+
 .style-checkbox {
   display: block;
   position: relative;

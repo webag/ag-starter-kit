@@ -24,6 +24,13 @@ $(function () {
 					send = false;
 				}
 			}
+			if ($(this).is('input[type="tel"]')){
+				console.log($(this).cleanVal().length);
+				if ($(this).cleanVal().length < 10){
+					$(this).addClass('error');
+					send = false;
+				}
+			}
 		});
 
 		$(this).find("[data-req='true']").on('focus', function () {
@@ -83,7 +90,12 @@ $(function () {
  Input mask BEGIN
  ***********************/
 $(function () {
-	$("input[type='tel']").mask("+7 (999) 999-99-99");
+	$("input[type='tel']").mask("+7 (000) 000-00-00",{
+		onInvalid: function(val, e, f, invalid, options){
+			var error = invalid[0];
+			console.log ("Digit: ", error.v, " is invalid for the position: ", error.p, ". We expect something like: ", error.e);
+		}
+	});
 });
 /***********************
  Input mask END
