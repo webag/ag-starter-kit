@@ -1,5 +1,5 @@
 /***********************
- отправка формы в php BEGIN
+ Отправка формы в php BEGIN
  ***********************/
 $(function () {
 	$(".ajax-form").on("submit", function (event) {
@@ -24,9 +24,9 @@ $(function () {
 					send = false;
 				}
 			}
-			if ($(this).is('input[type="tel"]')){
+			if ($(this).is('input[type="tel"]')) {
 				console.log($(this).cleanVal().length);
-				if ($(this).cleanVal().length < 10){
+				if ($(this).cleanVal().length < 10) {
 					$(this).addClass('error');
 					send = false;
 				}
@@ -82,7 +82,7 @@ $(function () {
 	});
 });
 /***********************
- отправка формы в php END
+ Отправка формы в php END
  ***********************/
 
 
@@ -90,12 +90,7 @@ $(function () {
  Input mask BEGIN
  ***********************/
 $(function () {
-	$("input[type='tel']").mask("+7 (000) 000-00-00",{
-		onInvalid: function(val, e, f, invalid, options){
-			var error = invalid[0];
-			console.log ("Digit: ", error.v, " is invalid for the position: ", error.p, ". We expect something like: ", error.e);
-		}
-	});
+	$("input[type='tel']").mask("+7 (000) 000-00-00");
 });
 /***********************
  Input mask END
