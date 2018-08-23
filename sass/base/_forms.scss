@@ -2,7 +2,7 @@ label {
 	cursor: pointer;
 }
 
-.text-input {
+.input-text {
 	display: inline-block;
 	font-family: $font;
 	font-size: 14px;
@@ -14,15 +14,16 @@ label {
 
 	&::placeholder {
 		font-size: 14px;
+		line-height: 1.3;
 		color: #A8A8A8;
 		opacity: 1;
-		transition: all 0.3s ease;
+		transition: opacity 0.3s ease;
 	}
 
 	&:focus {
 		outline: none;
 		&::placeholder {
-			opacity: 0;
+			opacity: 0.5;
 		}
 	}
 
@@ -92,7 +93,6 @@ label {
 		}
 	}
 }
-
 //style-checkbox
 
 
@@ -176,5 +176,4 @@ label {
 		}
 	}
 }
-
 //style-check-ios
