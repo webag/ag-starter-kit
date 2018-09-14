@@ -117,16 +117,13 @@ $.fancybox.defaults.i18n =
 	};
 
 function init_fancy() {
-	$().fancybox({
-		selector: '.fancy',
+	$('.fancy').fancybox({
 		buttons: ['close']
 	});
-	$().fancybox({
-		selector: '.fancy-modal',
+	$('.fancy-modal').fancybox({
 		touch: false
 	});
-	$().fancybox({
-		selector: '.fancy-map',
+	$('.fancy-map').fancybox({
 		toolbar: false,
 		smallBtn: true,
 		defaultType: "iframe"
@@ -134,8 +131,7 @@ function init_fancy() {
 }
 
 function init_fancy__video() {
-	$().fancybox({
-		selector: '.fancy-video',
+	$('.fancy-video').fancybox({
 		toolbar: false,
 		smallBtn: true,
 		youtube: {
