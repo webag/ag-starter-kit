@@ -121,6 +121,7 @@ function init_fancy() {
 		buttons: ['close']
 	});
 	$('.fancy-modal').fancybox({
+		selector: '',
 		touch: false
 	});
 	$('.fancy-map').fancybox({

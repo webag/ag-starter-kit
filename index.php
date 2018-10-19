@@ -24,6 +24,7 @@
 		</ol>
 
 		<a href="#" class="fancy-modal btn" data-src="#modal-order">Открыть order</a>
+		<a href="#" class="fancy-modal btn" data-src="#modal-order">Открыть order</a>
 		<a href="img/img.png" class="fancy btn" data-fancybox="1">Открыть img</a>
 		<a href="img/img.png" class="fancy btn" data-fancybox="1">Открыть img</a>
 		<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="fancy-video btn">Открыть youtube</a>
