@@ -25,7 +25,6 @@ $(function () {
 				}
 			}
 			if ($(this).is('input[type="tel"]')) {
-				console.log($(this).cleanVal().length);
 				if ($(this).cleanVal().length < 10) {
 					$(this).addClass('error');
 					send = false;
