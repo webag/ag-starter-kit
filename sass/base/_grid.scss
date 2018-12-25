@@ -45,7 +45,7 @@
 	margin-left: -$gutter;
 	margin-right: -$gutter;
 
-	[class^="grid"] {
+	[class*="grid"] {
 		padding-left: $gutter;
 		padding-right: $gutter;
 	}
