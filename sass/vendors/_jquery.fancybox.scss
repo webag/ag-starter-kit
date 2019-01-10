@@ -480,15 +480,6 @@ body.compensate-for-scrollbar {
     z-index: 99996;
 }
 
-@function max($numbers...){
-	@return m#{a}x(#{$numbers})
-}
-
-
-@function min($numbers...){
-	@return m#{i}n(#{$numbers})
-}
-
 
 @supports (padding: max(0px)) {
     .fancybox-caption {
