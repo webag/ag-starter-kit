@@ -27,10 +27,13 @@
 	opacity: 1;
 }
 
-.fancybox-slide--video {
-	padding: 40px 18px;
+.fancybox-slide--video,.fancybox-slide--html,.fancybox-slide--iframe {
+	padding: 24px 20px;
+	@include res(s){
+		padding: 20px 12px;
+	}
 }
 
-.fancybox-slide--iframe {
-	padding: 40px 18px;
+.fancybox-content{
+	overflow: visible !important;
 }

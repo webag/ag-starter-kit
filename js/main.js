@@ -25,7 +25,7 @@ $(function () {
 				}
 			}
 			if ($(this).is('input[type="tel"]')) {
-				if ($(this).cleanVal().length < 10) {
+				if ($(this).cleanVal().length < 11) {
 					$(this).addClass('error');
 					send = false;
 				}
@@ -87,9 +87,35 @@ $(function () {
 
 /***********************
  Input mask BEGIN
- ***********************/
+***********************/
 $(function () {
-	$("input[type='tel']").mask("+7 (000) 000-00-00");
+	var telInputs = $("input[type='tel']");
+	String.prototype.replaceAt = function(index, replacement) {
+		return this.substr(0, index) + replacement + this.substr(index + replacement.length);
+	};
+
+	var options =  {
+		onKeyPress: function(cep, event, currentField, options){
+			if (cep.charAt(1) === "8"){
+				var currentValue = currentField.get(0).value;
+				currentField.get(0).value = currentValue.replaceAt(1, "7");
+			}
+		}
+	};
+
+	telInputs.mask("+0 (000) 000-00-00", options);
+
+	telInputs.on('focus',function () {
+		if ($(this).get(0).value.length < 2){
+			$(this).get(0).value = "+"
+		}
+	});
+
+	telInputs.on('blur',function () {
+		if ($(this).get(0).value === "+"){
+			$(this).get(0).value = ""
+		}
+	})
 });
 /***********************
  Input mask END
@@ -100,6 +126,7 @@ $(function () {
  fancybox BEGIN
  ***********************/
 $.fancybox.defaults.backFocus = false;
+$.fancybox.defaults.autoFocus = false;
 $.fancybox.defaults.lang = 'ru';
 $.fancybox.defaults.i18n =
 	{
