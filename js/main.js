@@ -3,8 +3,8 @@
  ***********************/
 $(function () {
 	$(".ajax-form").on("submit", function (event) {
-		var form = $(this);
-		var send = true;
+		const form = $(this);
+		let send = true;
 		event.preventDefault();
 
 		$(this).find("[data-req='true']").each(function () {
@@ -37,20 +37,20 @@ $(function () {
 		});
 
 		// empty file inputs fix for mac
-		var fileInputs = $('input[type="file"]:not([disabled])', form);
+		const fileInputs = $('input[type="file"]:not([disabled])', form);
 		fileInputs.each(function (_, input) {
 			if (input.files.length > 0) return;
 			$(input).prop('disabled', true)
 		});
 
-		var form_data = new FormData(this);
+		const form_data = new FormData(this);
 
 		fileInputs.prop('disabled', false);
 
 		$("[data-label]").each(function () {
-			var input_name = $(this).attr('name');
-			var input_label__name = input_name + '_label';
-			var input_label__value = $(this).data('label').toString();
+			const input_name = $(this).attr('name');
+			const input_label__name = input_name + '_label';
+			const input_label__value = $(this).data('label').toString();
 			form_data.append(input_label__name, input_label__value)
 		});
 
@@ -89,15 +89,15 @@ $(function () {
  Input mask BEGIN
 ***********************/
 $(function () {
-	var telInputs = $("input[type='tel']");
+	const telInputs = $("input[type='tel']");
 	String.prototype.replaceAt = function(index, replacement) {
 		return this.substr(0, index) + replacement + this.substr(index + replacement.length);
 	};
 
-	var options =  {
+	const options =  {
 		onKeyPress: function(cep, event, currentField, options){
 			if (cep.charAt(1) === "8"){
-				var currentValue = currentField.get(0).value;
+				const currentValue = currentField.get(0).value;
 				currentField.get(0).value = currentValue.replaceAt(1, "7");
 			}
 		}
@@ -183,8 +183,8 @@ $(function () {
  ***********************/
 $(function () {
 	$('.scrollto').on('click', function () {
-		var elementClick = $(this).attr("href");
-		var destination = $(elementClick).offset().top;
+		const elementClick = $(this).attr("href");
+		const destination = $(elementClick).offset().top;
 		$('html,body').stop().animate({scrollTop: destination}, 1000);
 		return false;
 	});
