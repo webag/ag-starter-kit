@@ -69,7 +69,9 @@ $(function () {
 					if (result.indexOf("Mail FAIL") !== -1) {
 						$.fancybox.open({src: '#modal-error'});
 					} else {
-						$.fancybox.open({src: '#modal-thanks'});
+						setTimeout(function () {
+							$.fancybox.open({src: '#modal-thanks'});
+						}, 600);
 						setTimeout(function () {
 							$.fancybox.close();
 						}, 4500);
