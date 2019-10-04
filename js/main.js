@@ -144,7 +144,7 @@ $.fancybox.defaults.i18n =
 		}
 	};
 
-function init_fancy() {
+function initFancy() {
 	$('.fancy').fancybox({
 		buttons: ['close']
 	});
@@ -157,9 +157,6 @@ function init_fancy() {
 		smallBtn: true,
 		defaultType: "iframe"
 	});
-}
-
-function init_fancy__video() {
 	$('.fancy-video').fancybox({
 		toolbar: false,
 		smallBtn: true,
@@ -172,8 +169,7 @@ function init_fancy__video() {
 }
 
 $(function () {
-	init_fancy();
-	init_fancy__video();
+	initFancy();
 });
 /***********************
  fancybox END
