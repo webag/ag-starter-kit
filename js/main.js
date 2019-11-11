@@ -4,6 +4,7 @@
 $(function () {
 	$(".ajax-form").on("submit", function (event) {
 		const form = $(this);
+		const submitBtn = form.find('.btn');
 		let send = true;
 		event.preventDefault();
 
@@ -55,6 +56,7 @@ $(function () {
 		});
 
 		if (send === true) {
+			submitBtn.prop('disabled', true);
 			$.ajax({
 				type: "POST",
 				async: true,
@@ -77,8 +79,12 @@ $(function () {
 						}, 4500);
 						form[0].reset();
 					}
+					submitBtn.prop('disabled', false);
 				})
 			});
+			setTimeout(function () {
+				submitBtn.prop('disabled', false);
+			}, 4500);
 		}
 	});
 });
