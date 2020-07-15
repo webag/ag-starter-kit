@@ -1,6 +1,4 @@
-/***********************
- Отправка формы в php BEGIN
- ***********************/
+/* Отправка формы в php BEGIN */
 $(function () {
 	$(".ajax-form").on("submit", function (event) {
 		const form = $(this);
@@ -88,14 +86,10 @@ $(function () {
 		}
 	});
 });
-/***********************
- Отправка формы в php END
- ***********************/
+/* Отправка формы в php END */
 
 
-/***********************
- Input mask BEGIN
-***********************/
+/* Input mask BEGIN */
 $(function () {
 	const telInputs = $("input[type='tel']");
 	String.prototype.replaceAt = function(index, replacement) {
@@ -125,14 +119,10 @@ $(function () {
 		}
 	})
 });
-/***********************
- Input mask END
- ***********************/
+/* Input mask END */
 
 
-/***********************
- fancybox BEGIN
- ***********************/
+/* fancybox BEGIN */
 $.fancybox.defaults.backFocus = false;
 $.fancybox.defaults.autoFocus = false;
 $.fancybox.defaults.lang = 'ru';
@@ -177,14 +167,10 @@ function initFancy() {
 $(function () {
 	initFancy();
 });
-/***********************
- fancybox END
- ***********************/
+/* fancybox END */
 
 
-/***********************
- Прокрутка к секциям BEGIN
- ***********************/
+/* Прокрутка к секциям BEGIN */
 $(function () {
 	$('.scrollto').on('click', function () {
 		const elementClick = $(this).attr("href");
@@ -193,14 +179,10 @@ $(function () {
 		return false;
 	});
 });
-/***********************
- Прокрутка к секциям END
- ***********************/
+/* Прокрутка к секциям END */
 
 
-/***********************
- Waypoints BEGIN
- ***********************/
+/* Waypoints BEGIN */
 $(function () {
 	$('.anim').waypoint(function () {
 		$(this.element).toggleClass('animated');
@@ -208,6 +190,4 @@ $(function () {
 		offset: '85%'
 	});
 });
-/***********************
- Waypoints END
- ***********************/
+/* Waypoints END */
