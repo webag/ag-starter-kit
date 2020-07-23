@@ -58,7 +58,7 @@ $(function () {
 			$.ajax({
 				type: "POST",
 				async: true,
-				url: "/send.php",
+				url: "/ajax/send.php",
 				cache: false,
 				contentType: false,
 				processData: false,
@@ -125,6 +125,7 @@ $(function () {
 /* fancybox BEGIN */
 $.fancybox.defaults.backFocus = false;
 $.fancybox.defaults.autoFocus = false;
+$.fancybox.defaults.buttons = ['close'];
 $.fancybox.defaults.lang = 'ru';
 $.fancybox.defaults.i18n =
 	{

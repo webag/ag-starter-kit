@@ -4,6 +4,9 @@
     <list default="true" id="1f2410a3-d99b-46e5-ab4f-70aa412d8881" name="Default" comment="some updates">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phpmailer.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/phpmailer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phpmailer_exception.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/phpmailer_exception.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/send.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/send.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,6 +75,9 @@
     <property name="settings.editor.selected.configurable" value="settings.webpack" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\OSPanel\domains\ag-starter-kit\ajax" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\OSPanel\domains\ag-starter-kit\js-dev" />
       <recent name="C:\OSPanel\domains\ag-starter-kit\img" />
@@ -96,5 +102,15 @@
     <MESSAGE value="new prepros, robots" />
     <MESSAGE value="some updates" />
     <option name="LAST_COMMIT_MESSAGE" value="some updates" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2533" y="66" key="CommitChangelistDialog2" timestamp="1594792902305">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2533" y="66" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1594792902305" />
+    <state x="2472" y="253" key="Vcs.Push.Dialog.v2" timestamp="1594792904829">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2472" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1594792904829" />
   </component>
 </project>
