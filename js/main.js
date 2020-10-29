@@ -183,12 +183,21 @@ $(function () {
 /* Прокрутка к секциям END */
 
 
-/* Waypoints BEGIN */
-$(function () {
-	$('.anim').waypoint(function () {
-		$(this.element).toggleClass('animated');
-	}, {
-		offset: '85%'
+/* Anim Observer BEGIN */
+document.addEventListener("DOMContentLoaded", function(event) {
+	const elements = document.querySelectorAll('.anim');
+	const observer = new IntersectionObserver((entries) => {
+		entries.forEach(entry => {
+			if (entry.intersectionRatio > 0) {
+				entry.target.classList.add('animated');
+				observer.unobserve(entry.target);
+			} else {
+				entry.target.classList.remove('fancy');
+			}
+		});
+	});
+	elements.forEach(element => {
+		observer.observe(element);
 	});
 });
-/* Waypoints END */
+/* Anim Observer END */
