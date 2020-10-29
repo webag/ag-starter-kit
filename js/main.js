@@ -186,16 +186,23 @@ $(function () {
 /* Anim Observer BEGIN */
 document.addEventListener("DOMContentLoaded", function(event) {
 	const elements = document.querySelectorAll('.anim');
-	const observer = new IntersectionObserver((entries) => {
+	const options = {
+		rootMargin: '-50px 0px',
+		threshold: 0
+	}
+	const callback = (entries) => {
 		entries.forEach(entry => {
 			if (entry.intersectionRatio > 0) {
 				entry.target.classList.add('animated');
 				observer.unobserve(entry.target);
 			} else {
-				entry.target.classList.remove('fancy');
+				//entry.target.classList.remove('animated');
 			}
 		});
-	});
+	}
+
+	const observer = new IntersectionObserver(callback,options);
+
 	elements.forEach(element => {
 		observer.observe(element);
 	});

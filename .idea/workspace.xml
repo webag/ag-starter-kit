@@ -3,13 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1f2410a3-d99b-46e5-ab4f-70aa412d8881" name="Default" comment="some updates">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js-dev/assets.js" beforeDir="false" afterPath="$PROJECT_DIR$/js-dev/assets.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js-dev/vendors/device.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/js-dev/vendors/device.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js-dev/vendors/waypoints.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/assets.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/assets.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prepros.config" beforeDir="false" afterPath="$PROJECT_DIR$/prepros.config" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,13 +95,13 @@
     <option name="LAST_COMMIT_MESSAGE" value="some updates" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2533" y="66" key="CommitChangelistDialog2" timestamp="1595496761236">
+    <state x="2533" y="66" key="CommitChangelistDialog2" timestamp="1603953339529">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2533" y="66" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1595496761236" />
-    <state x="2472" y="253" key="Vcs.Push.Dialog.v2" timestamp="1595496763669">
+    <state x="2533" y="66" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1603953339529" />
+    <state x="2472" y="253" key="Vcs.Push.Dialog.v2" timestamp="1603953341648">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2472" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1595496763669" />
+    <state x="2472" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1603953341648" />
   </component>
 </project>
