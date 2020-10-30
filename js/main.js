@@ -89,6 +89,11 @@ $(function () {
 /* Отправка формы в php END */
 
 
+/* Flickity defaults BEGIN */
+//Flickity.defaults.accessibility = false;
+/* Flickity defaults END */
+
+
 /* Input mask BEGIN */
 $(function () {
 	const telInputs = $("input[type='tel']");
