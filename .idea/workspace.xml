@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1f2410a3-d99b-46e5-ab4f-70aa412d8881" name="Default" comment="some updates">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
-    </list>
+    <list default="true" id="1f2410a3-d99b-46e5-ab4f-70aa412d8881" name="Default" comment="some updates" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -95,13 +92,13 @@
     <option name="LAST_COMMIT_MESSAGE" value="some updates" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2156" y="86" key="CommitChangelistDialog2" timestamp="1603971259492">
+    <state x="2156" y="86" key="CommitChangelistDialog2" timestamp="1604039746398">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2156" y="86" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1603971259492" />
-    <state x="2472" y="253" key="Vcs.Push.Dialog.v2" timestamp="1603971261554">
+    <state x="2156" y="86" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1604039746398" />
+    <state x="2472" y="253" key="Vcs.Push.Dialog.v2" timestamp="1604039748830">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2472" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1603971261554" />
+    <state x="2472" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1604039748830" />
   </component>
 </project>

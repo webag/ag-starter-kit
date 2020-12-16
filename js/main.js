@@ -1,32 +1,33 @@
 /* Отправка формы в php BEGIN */
 $(function () {
 	$(".ajax-form").on("submit", function (event) {
+		event.preventDefault();
 		const form = $(this);
 		const submitBtn = form.find('.btn');
-		let send = true;
-		event.preventDefault();
+		const thanksModal = form.data('thanks') === undefined ? '#modal-thanks' : form.data('thanks');
+		let canSend = true;
 
 		$(this).find("[data-req='true']").each(function () {
 			if ($(this).val() === "") {
 				$(this).addClass('error');
-				send = false;
+				canSend = false;
 			}
 			if ($(this).is('select')) {
 				if ($(this).val() === null) {
 					$(this).addClass('error');
-					send = false;
+					canSend = false;
 				}
 			}
 			if ($(this).is('input[type="checkbox"]')) {
 				if ($(this).prop('checked') !== true) {
 					$(this).addClass('error');
-					send = false;
+					canSend = false;
 				}
 			}
 			if ($(this).is('input[type="tel"]')) {
 				if ($(this).cleanVal().length < 11) {
 					$(this).addClass('error');
-					send = false;
+					canSend = false;
 				}
 			}
 		});
@@ -53,7 +54,7 @@ $(function () {
 			form_data.append(input_label__name, input_label__value)
 		});
 
-		if (send === true) {
+		if (canSend === true) {
 			submitBtn.prop('disabled', true);
 			$.ajax({
 				type: "POST",
@@ -70,7 +71,7 @@ $(function () {
 						$.fancybox.open({src: '#modal-error'});
 					} else {
 						setTimeout(function () {
-							$.fancybox.open({src: '#modal-thanks'});
+							$.fancybox.open({src: thanksModal});
 						}, 600);
 						setTimeout(function () {
 							$.fancybox.close();
