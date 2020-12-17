@@ -67,9 +67,7 @@ $(function () {
 				success: (function (result) {
 					console.log(result);
 					$.fancybox.close();
-					if (result.indexOf("Mail FAIL") !== -1) {
-						$.fancybox.open({src: '#modal-error'});
-					} else {
+					if (result.includes('Mail OK')) {
 						setTimeout(function () {
 							$.fancybox.open({src: thanksModal});
 						}, 600);
@@ -77,6 +75,8 @@ $(function () {
 							$.fancybox.close();
 						}, 4500);
 						form[0].reset();
+					} else {
+						$.fancybox.open({src: '#modal-error'});
 					}
 					submitBtn.prop('disabled', false);
 				})
